@@ -24,19 +24,11 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  color: #fff;
-  position: absolute;
-  width: 100%;
-  text-align: center;
-  top: 50%;
-`;
-
-const Hero = () => (
+const ImageSection = () => (
   <StaticQuery
     query={graphql`
       query {
-        hero: file(relativePath: { eq: "hero.jpg" }) {
+        hero: file(relativePath: { eq: "bw.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1980) {
               ...GatsbyImageSharpFluid
@@ -51,10 +43,9 @@ const Hero = () => (
             fluid={data.hero.childImageSharp.fluid}
             style={{height: "100%"}}
           />
-          <Title>THIS IS POSADAS</Title>
       </Container>
     }
   />
 );
 
-export default Hero;
+export default ImageSection;
