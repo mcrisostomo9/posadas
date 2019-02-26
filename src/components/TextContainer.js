@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import mq from "../utils/breakpoints";
 
+export const Item = styled.div`
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  text-align: center;
+`;
+
 const TextContainer = styled.div`
   background: #fff;
   display: flex;
@@ -17,10 +25,7 @@ const TextContainer = styled.div`
   
   ${mq.a1200}{
       padding: 80px 20px;
-
   }
-  
-  
 `;
 
-export default TextContainer;
+export default  TextContainer;

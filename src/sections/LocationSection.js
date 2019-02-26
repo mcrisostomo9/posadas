@@ -19,10 +19,10 @@ const LocationSection = () => (
           <h3>Airport</h3>
           <p>John Wayne Airport</p>
       </Airport>
-      <InformationBox>
+      <Location>
           <h3>Location</h3>
-          <p>THe Rock Garden</p>
-      </InformationBox>
+          <p>The Rock Garden</p>
+      </Location>
   </InformationContainer>
 );
 

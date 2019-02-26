@@ -1,15 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
-import TextContainer from "../components/TextContainer";
-
-
-const Item = styled.div`
-  color: #000;
-  display: flex;
-  flex-direction: column;
-  padding: 16px;
-  text-align: center;
-`;
+import TextContainer, {Item} from "../components/TextContainer";
 
 const AgendaSection = () => (
   <TextContainer>
