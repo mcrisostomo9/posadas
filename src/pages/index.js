@@ -12,7 +12,7 @@ import ImageSection from "../sections/ImageSection";
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO  keywords={[`gatsby`, `application`, `react`]} />
     <HeroSection/>
     <CeremonyDateSection/>
     <AgendaSection/>
