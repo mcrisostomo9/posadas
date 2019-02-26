@@ -6,21 +6,21 @@ import mq from "../utils/breakpoints";
 
 const Container = styled.div`
   position: relative;
-  height: 400px;
+  height: 100vh;
 
-  ${mq.a500} {
-    height: 600px;
-  }
-
-  ${mq.a768} {
-    height: 700px;
-  }
-
-  ${mq.a992} {
-    height: 800px;
-  }
-  ${mq.a1200} {
-    height: 100vh;
+  // ${mq.a500} {
+  //   height: 600px;
+  // }
+  //
+  // ${mq.a768} {
+  //   height: 700px;
+  // }
+  //
+  // ${mq.a992} {
+  //   height: 100vh;
+  // }
+  ${mq.a1400} {
+    height: 1000px;
   }
 `;
 
@@ -38,7 +38,7 @@ const HeroSection = () => (
       query {
         hero: file(relativePath: { eq: "hero.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 1980) {
+            fluid(maxWidth: 2000) {
               ...GatsbyImageSharpFluid
             }
           }
