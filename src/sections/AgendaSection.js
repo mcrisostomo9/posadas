@@ -1,19 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import TextContainer from "../components/TextContainer";
 
-const Container = styled.div`
-  background: #fff;
-  height: 400px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-`;
 
 const Item = styled.div`
   color: #000;
@@ -29,7 +17,7 @@ const Item = styled.div`
 `;
 
 const AgendaSection = () => (
-  <Container>
+  <TextContainer>
       <Item>
           <h3>THE CEREMONY</h3>
           <p>Begins 5:00 in the Rock Garden</p>
@@ -46,7 +34,7 @@ const AgendaSection = () => (
           <p>Grand Ballroom for Dinner, Dancing, & Drinks</p>
           <p>Semi-formal Garden Attire</p>
       </Item>
-  </Container>
+  </TextContainer>
 );
 
 export default AgendaSection;

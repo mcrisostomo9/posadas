@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import mq from '../utils/breakpoints';
 
-export const InformationContainer = styled.div`
+const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
   height: 500px;
@@ -12,7 +12,7 @@ export const InformationContainer = styled.div`
   }
 `;
 
-export const InformationBox = styled.div`
+const InformationBox = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
@@ -20,4 +20,6 @@ export const InformationBox = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export {InformationBox, InformationContainer};
 
