@@ -6,13 +6,8 @@ const Item = styled.div`
   color: #000;
   display: flex;
   flex-direction: column;
-  padding: 0 16px;
+  padding: 16px;
   text-align: center;
-
-  p {
-    margin: 0;
-    padding: 10px;
-  }
 `;
 
 const HowWeMetSection = () => (

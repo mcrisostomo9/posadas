@@ -3,7 +3,6 @@ import mq from "../utils/breakpoints";
 
 const TextContainer = styled.div`
   background: #fff;
-  //height: 400px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -13,6 +12,7 @@ const TextContainer = styled.div`
   ${mq.a768} {
     flex-direction: row;
     padding: 60px 20px;
+    align-items: start;
   }
   
   ${mq.a1200}{
