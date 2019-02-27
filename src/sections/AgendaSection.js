@@ -1,23 +1,25 @@
 import React from 'react';
 import TextContainer, {Item} from "../components/TextContainer";
+import H3 from "../components/H3";
+import P from "../components/P";
 
 const AgendaSection = () => (
   <TextContainer>
       <Item>
-          <h3>THE CEREMONY</h3>
-          <p>Begins 5:00 in the Rock Garden</p>
-          <p>The Casino</p>
-          <p>San Clemente, CA</p>
+          <H3>THE CEREMONY</H3>
+          <P>Begins 5:00 in the Rock Garden</P>
+          <P>The Casino</P>
+          <P>San Clemente, CA</P>
       </Item>
       <Item>
-          <h3>COCKTAIL HOUR</h3>
-          <p>Immediately following the Ceremony</p>
-          <p>on the Patio of the Stars</p>
+          <H3>COCKTAIL HOUR</H3>
+          <P>Immediately following the Ceremony</P>
+          <P>on the Patio of the Stars</P>
       </Item>
       <Item>
-          <h3>THE CELEBRATION</h3>
-          <p>Grand Ballroom for Dinner, Dancing, & Drinks</p>
-          <p>Semi-formal Garden Attire</p>
+          <H3>THE CELEBRATION</H3>
+          <P>Grand Ballroom for Dinner, Dancing, & Drinks</P>
+          <P>Semi-formal Garden Attire</P>
       </Item>
   </TextContainer>
 );

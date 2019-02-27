@@ -8,19 +8,12 @@ const Container = styled.div`
   position: relative;
   height: 100vh;
 
-  // ${mq.a500} {
-  //   height: 600px;
-  // }
-  //
-  // ${mq.a768} {
-  //   height: 700px;
-  // }
-  //
-  // ${mq.a992} {
-  //   height: 100vh;
-  // }
-  ${mq.a1400} {
-    height: 1000px;
+  ${mq.a1600} {
+    height: 1050px;
+  }
+  
+  ${mq.a1800}{
+    height: auto;
   }
 `;
 
@@ -30,6 +23,14 @@ const Title = styled.h1`
   width: 100%;
   text-align: center;
   top: 50%;
+  
+  ${mq.a1600}{
+    top: 40%;
+  }
+  
+  ${mq.a1800}{
+    top: 25%;
+  }
 `;
 
 const HeroSection = () => (

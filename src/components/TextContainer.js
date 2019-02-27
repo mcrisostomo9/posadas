@@ -7,6 +7,7 @@ export const Item = styled.div`
   flex-direction: column;
   padding: 16px;
   text-align: center;
+  max-width: 400px;
 `;
 
 const TextContainer = styled.div`

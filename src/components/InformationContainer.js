@@ -8,7 +8,15 @@ const InformationContainer = styled.div`
 
   ${mq.a768} {
     flex-direction: row;
-    height: 700px;
+    height: 600px;
+  }
+  
+  ${mq.a1200}{
+    height: 650px;
+  }
+  
+  ${mq.a1400}{
+      height: 700px;
   }
 `;
 
