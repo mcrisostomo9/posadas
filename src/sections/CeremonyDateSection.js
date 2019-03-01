@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
   background: #c3bb9f;
@@ -11,13 +11,14 @@ const Container = styled.div`
 
 const CeremonyTitle = styled.h2`
   color: #000;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-size: 32px;
+  font-family: "GFS Didot", serif;
+  font-size: 36px;
+  font-weight: 400;
 `;
 
 const CeremonyDateSection = () => (
   <Container>
-      <CeremonyTitle>30 AUGUST 2019</CeremonyTitle>
+    <CeremonyTitle>30 AUGUST 2019</CeremonyTitle>
   </Container>
 );
 

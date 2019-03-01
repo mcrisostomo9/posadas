@@ -12,10 +12,15 @@ import P from "../components/P";
 const MapLink = styled.a`
   text-decoration: none;
   margin-top: 10px;
+  width: 175px;
   button {
     background: transparent;
     border: 1px solid #000;
     cursor: pointer;
+    width: 100%;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
 
     :hover {
       background: #000;
@@ -61,9 +66,7 @@ const SingleAccommodation = styled.div`
   text-align: center;
 
   h4 {
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
-      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      sans-serif;
+    font-family: "GFS Didot", serif;
     font-size: 20px;
     margin: 0 0 10px;
   }
@@ -74,6 +77,8 @@ const SingleAccommodation = styled.div`
 const AccommodationLink = styled.a`
   text-decoration: underline;
   color: #000;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 `;
 
 const AccommodationArray = [
