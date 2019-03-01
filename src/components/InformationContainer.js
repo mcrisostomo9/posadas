@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import mq from '../utils/breakpoints';
+import styled from "styled-components";
+import mq from "../utils/breakpoints";
 
 const InformationContainer = styled.div`
   display: flex;
@@ -10,13 +10,12 @@ const InformationContainer = styled.div`
     flex-direction: row;
     height: 600px;
   }
-  
-  ${mq.a1200}{
+
+  ${mq.a1200} {
     height: 650px;
   }
-  
-  ${mq.a1400}{
-      height: 700px;
+  ${mq.a1400} {
+    height: 700px;
   }
 `;
 
@@ -27,7 +26,10 @@ const InformationBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  :hover {
+    filter: contrast(90%);
+  }
 `;
 
-export {InformationBox, InformationContainer};
-
+export { InformationBox, InformationContainer };
