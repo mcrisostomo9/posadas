@@ -6,6 +6,7 @@ import {
   InformationBox,
   InformationContainer,
 } from "../components/InformationContainer";
+import P from "../components/P";
 
 const StyledInformationContainer = styled(InformationContainer)`
   flex-direction: column-reverse;
@@ -26,6 +27,10 @@ const RSVP = styled(InformationBox)`
   background: #c3bb9f;
 
   h3 {
+    color: #000;
+  }
+
+  p {
     color: #000;
   }
 `;
@@ -66,6 +71,7 @@ const RsvpSection = () => (
         <Link to="/gallery">
           <RSVP>
             <h3>RSVP</h3>
+            <P>Please RSVP by...</P>
           </RSVP>
         </Link>
         <Link to="/gallery">

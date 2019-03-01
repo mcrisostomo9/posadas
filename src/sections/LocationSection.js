@@ -10,9 +10,18 @@ import H3 from "../components/H3";
 import P from "../components/P";
 
 const MapLink = styled.a`
-  width: 100%;
   text-decoration: none;
-  height: 100%;
+  margin-top: 10px;
+  button {
+    background: transparent;
+    border: 1px solid #000;
+    cursor: pointer;
+
+    :hover {
+      background: #000;
+      color: #fff;
+    }
+  }
 `;
 
 const Location = styled(InformationBox)`
@@ -99,22 +108,23 @@ const LocationSection = () => (
     `}
     render={data => (
       <InformationContainer>
-        <MapLink
-          target="_blank"
-          href="https://www.google.com/maps/place/140+Avenida+Pico,+San+Clemente,+CA+92672/@33.432182,-117.630652,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf408918a7d37:0xaee354da2849cc84!8m2!3d33.432182!4d-117.630652"
-        >
-          <Location>
-            <Img
-              fluid={data.location.childImageSharp.fluid}
-              style={{ height: "100%" }}
-            />
-            <TextContainer>
-              <StyledH3>The Casino</StyledH3>
-              <StyledP>140 West Avenida Pico,</StyledP>
-              <StyledP>San Clemente, CA 92672</StyledP>
-            </TextContainer>
-          </Location>
-        </MapLink>
+        <Location>
+          <Img
+            fluid={data.location.childImageSharp.fluid}
+            style={{ height: "100%" }}
+          />
+          <TextContainer>
+            <StyledH3>The Casino</StyledH3>
+            <StyledP>140 West Avenida Pico,</StyledP>
+            <StyledP>San Clemente, CA 92672</StyledP>
+            <MapLink
+              target="_blank"
+              href="https://www.google.com/maps/place/140+Avenida+Pico,+San+Clemente,+CA+92672/@33.432182,-117.630652,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf408918a7d37:0xaee354da2849cc84!8m2!3d33.432182!4d-117.630652"
+            >
+              <button>Check it out</button>
+            </MapLink>
+          </TextContainer>
+        </Location>
         <Accommodation>
           {AccommodationArray.map(i => (
             <SingleAccommodation>
