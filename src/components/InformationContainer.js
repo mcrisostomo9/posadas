@@ -4,11 +4,10 @@ import mq from "../utils/breakpoints";
 const InformationContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 500px;
 
   ${mq.a768} {
     flex-direction: row;
-    height: 600px;
+    height: 575px;
   }
 
   ${mq.a1200} {
@@ -20,15 +19,19 @@ const InformationContainer = styled.div`
 `;
 
 const InformationBox = styled.div`
-  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 500px;
 
   :hover {
     filter: contrast(90%);
+  }
+
+  ${mq.a768} {
+    height: 100%;
   }
 `;
 

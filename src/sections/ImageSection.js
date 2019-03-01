@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import {graphql, StaticQuery} from "gatsby";
-import Img from "gatsby-image"
+import React from "react";
+import styled from "styled-components";
+import { graphql, StaticQuery } from "gatsby";
+import Img from "gatsby-image";
 import mq from "../utils/breakpoints";
 
 const Container = styled.div`
@@ -37,14 +37,14 @@ const ImageSection = () => (
         }
       }
     `}
-    render={data =>
+    render={data => (
       <Container>
-          <Img
-            fluid={data.hero.childImageSharp.fluid}
-            style={{height: "100%"}}
-          />
+        <Img
+          fluid={data.hero.childImageSharp.fluid}
+          style={{ height: "100%" }}
+        />
       </Container>
-    }
+    )}
   />
 );
 
