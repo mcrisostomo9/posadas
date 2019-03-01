@@ -63,7 +63,8 @@ const SingleAccommodation = styled.div`
 `;
 
 const AccommodationLink = styled.a`
-  text-decoration: none;
+  text-decoration: underline;
+  color: #fff;
 `;
 
 const AccommodationArray = [
