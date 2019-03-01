@@ -21,7 +21,7 @@ const Location = styled(InformationBox)`
 `;
 
 const Accommodation = styled(InformationBox)`
-  background-color: #b1b1b1;
+  background: #c3bb9f;
   position: relative;
 
   :hover {

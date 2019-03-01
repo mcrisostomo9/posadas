@@ -23,7 +23,11 @@ const StyledInformationContainer = styled(InformationContainer)`
 `;
 
 const RSVP = styled(InformationBox)`
-  background: #dad9d7;
+  background: #c3bb9f;
+
+  h3 {
+    color: #000;
+  }
 `;
 const Gallery = styled(InformationBox)`
   display: block;
@@ -38,6 +42,10 @@ const TextContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
+
+  h3 {
+    color: #000;
+  }
 `;
 
 const RsvpSection = () => (
