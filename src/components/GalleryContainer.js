@@ -8,13 +8,11 @@ const Container = styled.div`
   margin: 0 auto 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-gap: 10px;
 
   ${mq.a768} {
     grid-template-columns: repeat(3, 1fr);
-  }
-  ${mq.a1200} {
-    //grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
   }
 `;
 
