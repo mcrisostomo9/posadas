@@ -2,7 +2,6 @@ import React from "react";
 import Img from "gatsby-image";
 import { Link, graphql } from "gatsby";
 import styled from "styled-components";
-import mq from "../utils/breakpoints";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -56,7 +55,11 @@ const GalleryPage = props => (
         <Img fluid={props.data.gallery18.childImageSharp.fluid} />
       </GalleryContainer>
       <P>Photography by Arjay Bernardino</P>
-      <a href="https://arjaybphoto.com/" target="_blank">
+      <a
+        href="https://arjaybphoto.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <P>arjaybphoto.com/</P>
       </a>
     </PageContainer>
