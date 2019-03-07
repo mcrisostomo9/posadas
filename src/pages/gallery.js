@@ -13,6 +13,15 @@ const PageContainer = styled.div`
   padding: 20px;
   text-align: center;
 
+  h1 {
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
   p {
     color: #000;
     font-size: 16px;
@@ -23,6 +32,9 @@ const GalleryPage = props => (
   <Layout>
     <SEO title="Page two" />
     <PageContainer>
+      <Link to="/">
+        <h1>This is Posadas</h1>
+      </Link>
       <GalleryContainer>
         <Img fluid={props.data.galleryOne.childImageSharp.fluid} />
         <Img fluid={props.data.galleryTwo.childImageSharp.fluid} />
@@ -43,7 +55,7 @@ const GalleryPage = props => (
         <Img fluid={props.data.gallery17.childImageSharp.fluid} />
         <Img fluid={props.data.gallery18.childImageSharp.fluid} />
       </GalleryContainer>
-      <P>Photography by Arjay Bernardini</P>
+      <P>Photography by Arjay Bernardino</P>
       <a href="http://arjaybphoto.com/" target="_blank">
         <P>http://arjaybphoto.com/</P>
       </a>
