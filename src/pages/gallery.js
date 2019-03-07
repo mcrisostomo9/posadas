@@ -7,9 +7,10 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import GalleryContainer from "../components/GalleryContainer";
 import P from "../components/P";
+import mq from "../utils/breakpoints";
 
 const PageContainer = styled.div`
-  padding: 20px;
+  padding: 20px 10px;
   text-align: center;
   position: relative;
   z-index: 0;
@@ -27,13 +28,16 @@ const PageContainer = styled.div`
     color: #000;
     font-size: 16px;
   }
+
+  ${mq.a768} {
+    padding: 20px;
+  }
 `;
 
 const TitleContainer = styled.div`
   z-index: 1;
   padding-top: 20px;
-  background: white;
-  color: #fff;
+  background: #fff;
   position: fixed;
   text-align: center;
   width: 100%;
@@ -42,11 +46,6 @@ const TitleContainer = styled.div`
     text-decoration: none;
     color: #000;
   }
-
-  p {
-    color: #000;
-    font-size: 16px;
-  }
 `;
 
 const GalleryPage = props => (
@@ -54,7 +53,7 @@ const GalleryPage = props => (
     <SEO title="Page two" />
     <TitleContainer>
       <Link to="/">
-        <h1>This is Posadas</h1>
+        <h1>THIS IS POSADAS</h1>
       </Link>
     </TitleContainer>
     <PageContainer>
