@@ -38,6 +38,9 @@ const GalleryPage = props => (
         <Img fluid={props.data.galleryOne.childImageSharp.fluid} />
         <Img fluid={props.data.galleryTwo.childImageSharp.fluid} />
         <Img fluid={props.data.galleryThree.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery25.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery26.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery27.childImageSharp.fluid} />
         <Img fluid={props.data.galleryFour.childImageSharp.fluid} />
         <Img fluid={props.data.galleryFive.childImageSharp.fluid} />
         <Img fluid={props.data.gallerySix.childImageSharp.fluid} />
@@ -53,6 +56,13 @@ const GalleryPage = props => (
         <Img fluid={props.data.gallery16.childImageSharp.fluid} />
         <Img fluid={props.data.gallery17.childImageSharp.fluid} />
         <Img fluid={props.data.gallery18.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery19.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery20.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery21.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery22.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery23.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery24.childImageSharp.fluid} />
+        <Img fluid={props.data.gallery28.childImageSharp.fluid} />
       </GalleryContainer>
       <P>Photography by Arjay Bernardino</P>
       <a
@@ -135,6 +145,36 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     gallery18: file(relativePath: { eq: "gallery18.jpg" }) {
+      ...fluidImage
+    }
+    gallery19: file(relativePath: { eq: "gallery19.jpg" }) {
+      ...fluidImage
+    }
+    gallery20: file(relativePath: { eq: "gallery20.jpg" }) {
+      ...fluidImage
+    }
+    gallery21: file(relativePath: { eq: "gallery21.jpg" }) {
+      ...fluidImage
+    }
+    gallery22: file(relativePath: { eq: "gallery22.jpg" }) {
+      ...fluidImage
+    }
+    gallery23: file(relativePath: { eq: "gallery23.jpg" }) {
+      ...fluidImage
+    }
+    gallery24: file(relativePath: { eq: "gallery24.jpg" }) {
+      ...fluidImage
+    }
+    gallery25: file(relativePath: { eq: "gallery25.jpg" }) {
+      ...fluidImage
+    }
+    gallery26: file(relativePath: { eq: "gallery26.jpg" }) {
+      ...fluidImage
+    }
+    gallery27: file(relativePath: { eq: "gallery27.jpg" }) {
+      ...fluidImage
+    }
+    gallery28: file(relativePath: { eq: "gallery28.jpg" }) {
       ...fluidImage
     }
   }
