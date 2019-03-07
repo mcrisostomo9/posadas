@@ -5,7 +5,7 @@ import mq from "../utils/breakpoints";
 const Container = styled.div`
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto 20px;
+  margin: 60px auto 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;

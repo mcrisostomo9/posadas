@@ -11,6 +11,8 @@ import P from "../components/P";
 const PageContainer = styled.div`
   padding: 20px;
   text-align: center;
+  position: relative;
+  z-index: 0;
 
   h1 {
     display: inline-block;
@@ -27,13 +29,34 @@ const PageContainer = styled.div`
   }
 `;
 
+const TitleContainer = styled.div`
+  z-index: 1;
+  padding-top: 20px;
+  background: white;
+  color: #fff;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  p {
+    color: #000;
+    font-size: 16px;
+  }
+`;
+
 const GalleryPage = props => (
   <Layout>
     <SEO title="Page two" />
-    <PageContainer>
+    <TitleContainer>
       <Link to="/">
         <h1>This is Posadas</h1>
       </Link>
+    </TitleContainer>
+    <PageContainer>
       <GalleryContainer>
         <Img fluid={props.data.galleryOne.childImageSharp.fluid} />
         <Img fluid={props.data.galleryTwo.childImageSharp.fluid} />
