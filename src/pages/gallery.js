@@ -56,8 +56,8 @@ const GalleryPage = props => (
         <Img fluid={props.data.gallery18.childImageSharp.fluid} />
       </GalleryContainer>
       <P>Photography by Arjay Bernardino</P>
-      <a href="http://arjaybphoto.com/" target="_blank">
-        <P>http://arjaybphoto.com/</P>
+      <a href="https://arjaybphoto.com/" target="_blank">
+        <P>arjaybphoto.com/</P>
       </a>
     </PageContainer>
   </Layout>
