@@ -37,6 +37,7 @@ const TitleContainer = styled.div`
   position: fixed;
   text-align: center;
   width: 100%;
+  border-bottom: 1px solid #c3bb9f;
   a {
     text-decoration: none;
     color: #000;
