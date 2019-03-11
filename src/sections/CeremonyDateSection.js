@@ -11,7 +11,6 @@ const Container = styled.div`
 
 const CeremonyTitle = styled.h2`
   color: #000;
-  font-family: "GFS Didot", serif;
   font-size: 36px;
   font-weight: 400;
 `;

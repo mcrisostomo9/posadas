@@ -8,25 +8,13 @@ import {
 import styled from "styled-components";
 import H3 from "../components/H3";
 import P from "../components/P";
+import Button from "../components/button";
 
 const MapLink = styled.a`
   text-decoration: none;
   margin-top: 10px;
-  width: 175px;
-  button {
-    background: transparent;
-    border: 1px solid #000;
-    cursor: pointer;
-    width: 100%;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI,
-      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-      sans-serif;
-
-    :hover {
-      background: #000;
-      color: #fff;
-    }
-  }
+  width: 100%;
+  max-width: 175px;
 `;
 
 const Location = styled(InformationBox)`
@@ -125,7 +113,7 @@ const LocationSection = () => (
               target="_blank"
               href="https://www.google.com/maps/place/140+Avenida+Pico,+San+Clemente,+CA+92672/@33.432182,-117.630652,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcf408918a7d37:0xaee354da2849cc84!8m2!3d33.432182!4d-117.630652"
             >
-              <button>Check it out</button>
+              <Button>View Map</Button>
             </MapLink>
           </TextContainer>
         </Location>

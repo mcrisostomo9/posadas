@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
+import { ReactTypeformEmbed } from "react-typeform-embed";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import {
@@ -7,6 +8,7 @@ import {
   InformationContainer,
 } from "../components/InformationContainer";
 import P from "../components/P";
+import Button from "../components/button";
 
 const StyledInformationContainer = styled(InformationContainer)`
   flex-direction: column-reverse;
@@ -52,43 +54,71 @@ const TextContainer = styled.div`
   h3 {
     color: #000;
   }
+
+  a {
+    width: 100%;
+    max-width: 175px;
+    height: auto;
+  }
 `;
 
-const RsvpSection = () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        rsvp: file(relativePath: { eq: "rsvp.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1980) {
-              ...GatsbyImageSharpFluid
+class RsvpSection extends React.Component {
+  constructor(props) {
+    super(props);
+    this.openForm = this.openForm.bind(this);
+  }
+
+  openForm() {
+    this.typeformEmbed.typeform.open();
+  }
+  render() {
+    return (
+      <StaticQuery
+        query={graphql`
+          query {
+            rsvp: file(relativePath: { eq: "rsvp.jpg" }) {
+              childImageSharp {
+                fluid(maxWidth: 1980) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
             }
           }
-        }
-      }
-    `}
-    render={data => (
-      <StyledInformationContainer>
-        <Link to="/rsvp">
-          <RSVP>
-            <h3>RSVP</h3>
-            <P>Please RSVP by...</P>
-          </RSVP>
-        </Link>
-        <Link to="/gallery">
-          <Gallery>
-            <Img
-              fluid={data.rsvp.childImageSharp.fluid}
-              style={{ height: "100%" }}
-            />
-            <TextContainer>
-              <h3>Gallery</h3>
-            </TextContainer>
-          </Gallery>
-        </Link>
-      </StyledInformationContainer>
-    )}
-  />
-);
+        `}
+        render={data => (
+          <StyledInformationContainer>
+            <RSVP>
+              <ReactTypeformEmbed
+                popup
+                autoOpen={false}
+                url="https://markcrisostomo.typeform.com/to/OI4QVz"
+                hideHeaders
+                hideFooter
+                buttonText="Go!"
+                style={{ top: 100 }}
+                ref={tf => {
+                  this.typeformEmbed = tf;
+                }}
+              />
+              <Button onClick={this.openForm}>RSVP</Button>{" "}
+              <P>Please RSVP by...</P>
+            </RSVP>
+            <Gallery>
+              <Img
+                fluid={data.rsvp.childImageSharp.fluid}
+                style={{ height: "100%" }}
+              />
+              <TextContainer>
+                <Link to="/gallery">
+                  <Button>View Gallery</Button>
+                </Link>
+              </TextContainer>
+            </Gallery>
+          </StyledInformationContainer>
+        )}
+      />
+    );
+  }
+}
 
 export default RsvpSection;
