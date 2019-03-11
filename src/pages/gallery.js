@@ -89,11 +89,11 @@ const GalleryPage = props => (
       </GalleryContainer>
       <P>Photography by Arjay Bernardino</P>
       <a
-        href="https://arjaybphoto.com/"
+        href="https://arjaybphoto.com"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <P>arjaybphoto.com/</P>
+        <P>arjaybphoto.com</P>
       </a>
     </PageContainer>
   </Layout>
