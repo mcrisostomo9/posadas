@@ -90,7 +90,7 @@ const AccommodationArray = [
   { name: "Doubletree Dana Point", link: "www.doubletree3.hilton.com" },
   {
     name: "Residence Inn Dana Point San Juan Capistrano",
-    link: "www.marriot.com",
+    link: "www.marriott.com",
   },
 ];
 
