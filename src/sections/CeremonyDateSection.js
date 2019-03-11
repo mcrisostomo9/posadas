@@ -16,7 +16,7 @@ const Container = styled.div`
 
 const CeremonyTitle = styled.h2`
   color: #000;
-  font-size: 50px;
+  font-size: 42px;
   font-weight: 400;
 `;
 
