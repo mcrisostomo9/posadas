@@ -48,56 +48,60 @@ const TitleContainer = styled.div`
   }
 `;
 
-const GalleryPage = props => (
-  <Layout>
-    <SEO title="Page two" />
-    <TitleContainer>
-      <Link to="/">
-        <h1>THIS IS POSADAS</h1>
-      </Link>
-    </TitleContainer>
-    <PageContainer>
-      <GalleryContainer>
-        <Img fluid={props.data.galleryOne.childImageSharp.fluid} />
-        <Img fluid={props.data.galleryTwo.childImageSharp.fluid} />
-        <Img fluid={props.data.galleryThree.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery25.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery26.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery27.childImageSharp.fluid} />
-        <Img fluid={props.data.galleryFour.childImageSharp.fluid} />
-        <Img fluid={props.data.galleryFive.childImageSharp.fluid} />
-        <Img fluid={props.data.gallerySix.childImageSharp.fluid} />
-        <Img fluid={props.data.gallerySeven.childImageSharp.fluid} />
-        <Img fluid={props.data.galleryEight.childImageSharp.fluid} />
-        <Img fluid={props.data.galleryNine.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery10.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery11.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery12.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery13.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery14.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery15.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery16.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery17.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery18.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery19.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery20.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery21.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery22.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery23.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery24.childImageSharp.fluid} />
-        <Img fluid={props.data.gallery28.childImageSharp.fluid} />
-      </GalleryContainer>
-      <P>Photography by Arjay Bernardino</P>
-      <a
-        href="https://arjaybphoto.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <P>arjaybphoto.com</P>
-      </a>
-    </PageContainer>
-  </Layout>
-);
+class GalleryPage extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <SEO title="Page two" />
+        <TitleContainer>
+          <Link to="/">
+            <h1>THIS IS POSADAS</h1>
+          </Link>
+        </TitleContainer>
+        <PageContainer>
+          <GalleryContainer>
+            <Img fluid={this.props.data.galleryOne.childImageSharp.fluid} />
+            <Img fluid={this.props.data.galleryTwo.childImageSharp.fluid} />
+            <Img fluid={this.props.data.galleryThree.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery25.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery26.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery27.childImageSharp.fluid} />
+            <Img fluid={this.props.data.galleryFour.childImageSharp.fluid} />
+            <Img fluid={this.props.data.galleryFive.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallerySix.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallerySeven.childImageSharp.fluid} />
+            <Img fluid={this.props.data.galleryEight.childImageSharp.fluid} />
+            <Img fluid={this.props.data.galleryNine.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery10.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery11.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery12.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery13.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery14.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery15.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery16.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery17.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery18.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery19.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery20.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery21.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery22.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery23.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery24.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery28.childImageSharp.fluid} />
+          </GalleryContainer>
+          <P>Photography by Arjay Bernardino</P>
+          <a
+            href="https://arjaybphoto.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <P>arjaybphoto.com</P>
+          </a>
+        </PageContainer>
+      </Layout>
+    );
+  }
+}
 
 export default GalleryPage;
 
