@@ -95,8 +95,6 @@ class RsvpSection extends React.Component {
                 url="https://markcrisostomo.typeform.com/to/OI4QVz"
                 hideHeaders
                 hideFooter
-                buttonText="Go!"
-                style={{ top: 100 }}
                 ref={tf => {
                   this.typeformEmbed = tf;
                 }}
