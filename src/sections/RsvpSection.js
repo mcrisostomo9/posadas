@@ -70,7 +70,7 @@ const RsvpSection = () => (
     `}
     render={data => (
       <StyledInformationContainer>
-        <Link to="/gallery">
+        <Link to="/rsvp">
           <RSVP>
             <h3>RSVP</h3>
             <P>Please RSVP by...</P>
