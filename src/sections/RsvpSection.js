@@ -28,7 +28,7 @@ const StyledInformationContainer = styled(InformationContainer)`
   button {
     font-size: 20px;
     line-height: normal;
-    padding: 10px;
+    padding: 5px 0;
   }
 `;
 
