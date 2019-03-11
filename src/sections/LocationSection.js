@@ -9,6 +9,7 @@ import styled from "styled-components";
 import H3 from "../components/H3";
 import P from "../components/P";
 import Button from "../components/button";
+import mq from "../utils/breakpoints";
 
 const MapLink = styled.a`
   text-decoration: none;
@@ -52,26 +53,28 @@ const StyledP = styled(P)`
 
 const SingleAccommodation = styled.div`
   text-align: center;
-
-  h4 {
-    font-size: 20px;
-    margin: 0 0 10px;
-  }
-
   margin-bottom: 16px;
 `;
 
 const AccommodationLink = styled.a`
   text-decoration: underline;
   color: #000;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+
+  ${mq.a768} {
+    font-size: 16px;
+  }
+
+  ${mq.a1200} {
+    font-size: 20px;
+  }
 `;
 
 const AccommodationArray = [
   {
     name: "Ritz Carlton Laguna Niguel",
-    link: "www.ritzcarlton.com/",
+    link: "www.ritzcarlton.com",
   },
   {
     name: "St. Regis Monarch Beach",
@@ -120,9 +123,9 @@ const LocationSection = () => (
         <Accommodation>
           {AccommodationArray.map(i => (
             <SingleAccommodation>
-              <h4>{i.name}</h4>
+              <StyledH3>{i.name}</StyledH3>
               <AccommodationLink target="_blank" href={`https://${i.link}`}>
-                {i.link}
+                <StyledP>{i.link}</StyledP>
               </AccommodationLink>
             </SingleAccommodation>
           ))}

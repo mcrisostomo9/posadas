@@ -35,6 +35,7 @@ const RSVP = styled(InformationBox)`
 
   p {
     color: #000;
+    margin-top: 8px;
   }
 `;
 const Gallery = styled(InformationBox)`
@@ -100,7 +101,7 @@ class RsvpSection extends React.Component {
                   this.typeformEmbed = tf;
                 }}
               />
-              <Button onClick={this.openForm}>RSVP</Button>{" "}
+              <Button onClick={this.openForm}>RSVP</Button>
               <P>Please RSVP by...</P>
             </RSVP>
             <Gallery>
