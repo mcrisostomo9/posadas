@@ -24,6 +24,12 @@ const StyledInformationContainer = styled(InformationContainer)`
     font-size: 34px;
     font-weight: 400;
   }
+
+  button {
+    font-size: 20px;
+    line-height: normal;
+    padding: 10px;
+  }
 `;
 
 const RSVP = styled(InformationBox)`
