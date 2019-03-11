@@ -16,8 +16,12 @@ const Container = styled.div`
 
 const CeremonyTitle = styled.h2`
   color: #000;
-  font-size: 42px;
   font-weight: 400;
+  font-size: 36px;
+
+  ${mq.a1200} {
+    font-size: 48px;
+  }
 `;
 
 const CeremonyDateSection = () => (

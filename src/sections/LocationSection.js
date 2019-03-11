@@ -115,7 +115,7 @@ const LocationSection = () => (
             style={{ height: "100%" }}
           />
           <TextContainer>
-            <StyledH3>The Casino</StyledH3>
+            <StyledH3>THE CASINO</StyledH3>
             <StyledP>140 West Avenida Pico,</StyledP>
             <StyledP>San Clemente, CA 92672</StyledP>
             <MapLink
