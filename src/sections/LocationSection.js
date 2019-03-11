@@ -66,7 +66,6 @@ const SingleAccommodation = styled.div`
   text-align: center;
 
   h4 {
-    font-family: "GFS Didot", serif;
     font-size: 20px;
     margin: 0 0 10px;
   }

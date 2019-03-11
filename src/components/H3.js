@@ -2,7 +2,6 @@ import styled from "styled-components";
 import mq from "../utils/breakpoints";
 
 const H3 = styled.h3`
-  font-family: "GFS Didot", serif;
   font-weight: 400;
 
   ${mq.a768} {

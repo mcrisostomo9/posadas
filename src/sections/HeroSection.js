@@ -23,7 +23,7 @@ const Title = styled.h1`
   width: 100%;
   text-align: center;
   top: 50%;
-  font-family: "GFS Didot", serif;
+  font-family: "Playfair Display", serif;
   font-size: 36px;
 
   ${mq.a1200} {

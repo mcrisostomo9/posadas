@@ -20,7 +20,6 @@ const StyledInformationContainer = styled(InformationContainer)`
 
   h3 {
     font-size: 34px;
-    font-family: "GFS Didot", serif;
     font-weight: 400;
   }
 `;
