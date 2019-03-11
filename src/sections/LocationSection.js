@@ -45,6 +45,12 @@ const TextContainer = styled.div`
 
 const StyledH3 = styled(H3)`
   color: #000;
+  font-size: 16px;
+
+  ${mq.a1200} {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
 `;
 
 const StyledP = styled(P)`
