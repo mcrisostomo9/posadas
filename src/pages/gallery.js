@@ -72,6 +72,9 @@ class GalleryPage extends React.Component {
             <Img fluid={this.props.data.gallerySeven.childImageSharp.fluid} />
             <Img fluid={this.props.data.galleryEight.childImageSharp.fluid} />
             <Img fluid={this.props.data.galleryNine.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery21.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery22.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery23.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery10.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery11.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery12.childImageSharp.fluid} />
@@ -83,11 +86,10 @@ class GalleryPage extends React.Component {
             <Img fluid={this.props.data.gallery18.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery19.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery20.childImageSharp.fluid} />
-            <Img fluid={this.props.data.gallery21.childImageSharp.fluid} />
-            <Img fluid={this.props.data.gallery22.childImageSharp.fluid} />
-            <Img fluid={this.props.data.gallery23.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery24.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery29.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery28.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery30.childImageSharp.fluid} />
           </GalleryContainer>
           <P>Photography by Arjay Bernardino</P>
           <a
@@ -202,6 +204,12 @@ export const pageQuery = graphql`
       ...fluidImage
     }
     gallery28: file(relativePath: { eq: "gallery28.jpg" }) {
+      ...fluidImage
+    }
+    gallery29: file(relativePath: { eq: "gallery29.jpg" }) {
+      ...fluidImage
+    }
+    gallery30: file(relativePath: { eq: "gallery30.jpg" }) {
       ...fluidImage
     }
   }
