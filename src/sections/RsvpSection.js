@@ -100,7 +100,7 @@ class RsvpSection extends React.Component {
                 }}
               />
               <Button onClick={this.openForm}>RSVP</Button>
-              <P>Please RSVP by...</P>
+              <P>Please RSVP by July 1st</P>
             </RSVP>
             <Gallery>
               <Img

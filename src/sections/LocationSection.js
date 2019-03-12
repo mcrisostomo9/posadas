@@ -43,6 +43,10 @@ const TextContainer = styled.div`
   height: 100%;
 `;
 
+const TitleH3 = styled(H3)`
+  color: #000;
+`;
+
 const StyledH3 = styled(H3)`
   color: #000;
   font-size: 16px;
@@ -115,7 +119,7 @@ const LocationSection = () => (
             style={{ height: "100%" }}
           />
           <TextContainer>
-            <StyledH3>THE CASINO</StyledH3>
+            <TitleH3>THE CASINO</TitleH3>
             <StyledP>140 West Avenida Pico,</StyledP>
             <StyledP>San Clemente, CA 92672</StyledP>
             <MapLink
