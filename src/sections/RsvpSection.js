@@ -51,6 +51,7 @@ const TextContainer = styled.div`
   width: 100%;
   position: absolute;
   top: 0;
+  flex-direction: column;
 
   h3 {
     color: #000;
@@ -61,6 +62,10 @@ const TextContainer = styled.div`
     max-width: 175px;
     height: auto;
   }
+`;
+
+const Invisible = styled.div`
+  color: transparent;
 `;
 
 class RsvpSection extends React.Component {
@@ -111,6 +116,7 @@ class RsvpSection extends React.Component {
                 <Link to="/gallery">
                   <Button>View Gallery</Button>
                 </Link>
+                <Invisible>Website by markus</Invisible>
               </TextContainer>
             </Gallery>
           </StyledInformationContainer>
