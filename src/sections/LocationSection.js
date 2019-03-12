@@ -75,10 +75,6 @@ const AccommodationLink = styled.a`
   ${mq.a768} {
     font-size: 16px;
   }
-
-  ${mq.a1200} {
-    font-size: 20px;
-  }
 `;
 
 const AccommodationArray = [
@@ -135,7 +131,7 @@ const LocationSection = () => (
             <SingleAccommodation>
               <StyledH3>{i.name}</StyledH3>
               <AccommodationLink target="_blank" href={`https://${i.link}`}>
-                <StyledP>{i.link}</StyledP>
+                {i.link}
               </AccommodationLink>
             </SingleAccommodation>
           ))}
