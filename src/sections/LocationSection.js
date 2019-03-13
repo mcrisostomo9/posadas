@@ -26,6 +26,7 @@ const Location = styled(InformationBox)`
 const Accommodation = styled(InformationBox)`
   background: #c3bb9f;
   position: relative;
+  padding: 12px 36px;
 
   :hover {
     filter: none;
@@ -57,6 +58,16 @@ const StyledH3 = styled(H3)`
   }
 `;
 
+const H4 = styled.h4`
+  color: #000;
+  font-size: 16px;
+
+  ${mq.a1200} {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+`;
+
 const StyledP = styled(P)`
   color: #000;
 `;
@@ -64,6 +75,10 @@ const StyledP = styled(P)`
 const SingleAccommodation = styled.div`
   text-align: center;
   margin-bottom: 16px;
+`;
+
+const OtherAccommodation = styled(SingleAccommodation)`
+  margin-bottom: 10px;
 `;
 
 const AccommodationLink = styled.a`
@@ -77,7 +92,22 @@ const AccommodationLink = styled.a`
   }
 `;
 
+const Description = styled(P)`
+  font-size: 14px !important;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+`;
+
 const AccommodationArray = [
+  {
+    name: "Residence Inn Dana Point San Juan Capistrano",
+    link:
+      "marriott.com/hotels/travel/snasj-residence-inn-dana-point-san-juan-capistrano/",
+    linkText: "marriott.com",
+    description:
+      "For your convenience, a block of rooms has been reserved at Residence Inn Dana Point San Juan Capistrano. When calling to make your reservation, please mention the Posadas wedding in order to receive a discounted rate.",
+  },
   {
     name: "Ritz Carlton Laguna Niguel",
     link: "www.ritzcarlton.com",
@@ -97,11 +127,6 @@ const AccommodationArray = [
     name: "Doubletree Dana Point",
     link: "doubletree3.hilton.com/en/index.html",
     linkText: "doubletree3.hilton.com",
-  },
-  {
-    name: "Residence Inn Dana Point San Juan Capistrano",
-    link: "www.marriott.com",
-    linkText: "marriott.com",
   },
 ];
 
@@ -138,14 +163,27 @@ const LocationSection = () => (
           </TextContainer>
         </Location>
         <Accommodation>
-          {AccommodationArray.map(i => (
-            <SingleAccommodation>
-              <StyledH3>{i.name}</StyledH3>
-              <AccommodationLink target="_blank" href={`https://${i.link}`}>
-                {i.linkText}
-              </AccommodationLink>
-            </SingleAccommodation>
-          ))}
+          <SingleAccommodation>
+            <StyledH3>{AccommodationArray[0].name}</StyledH3>
+            <Description>{AccommodationArray[0].description}</Description>
+            <AccommodationLink
+              target="_blank"
+              href={`https://${AccommodationArray[0].link}`}
+            >
+              {AccommodationArray[0].linkText}
+            </AccommodationLink>
+          </SingleAccommodation>
+          <StyledH3>Additional Accommodations</StyledH3>
+          {AccommodationArray.map(
+            i =>
+              !i.description && (
+                <OtherAccommodation>
+                  <AccommodationLink target="_blank" href={`https://${i.link}`}>
+                    {i.linkText}
+                  </AccommodationLink>
+                </OtherAccommodation>
+              )
+          )}
         </Accommodation>
       </InformationContainer>
     )}

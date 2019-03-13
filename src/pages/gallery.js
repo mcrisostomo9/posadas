@@ -8,6 +8,7 @@ import SEO from "../components/seo";
 import GalleryContainer from "../components/GalleryContainer";
 import P from "../components/P";
 import mq from "../utils/breakpoints";
+import StickyNav from "../components/StickyNav";
 
 const PageContainer = styled.div`
   padding: 20px 10px;
@@ -34,30 +35,12 @@ const PageContainer = styled.div`
   }
 `;
 
-const TitleContainer = styled.div`
-  z-index: 1;
-  padding-top: 20px;
-  background: #fff;
-  position: fixed;
-  text-align: center;
-  width: 100%;
-  border-bottom: 1px solid #c3bb9f;
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-`;
-
 class GalleryPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO title="Page two" />
-        <TitleContainer>
-          <Link to="/">
-            <h1>THIS IS POSADAS</h1>
-          </Link>
-        </TitleContainer>
+        <SEO title="Engagement Photos" />
+        <StickyNav />
         <PageContainer>
           <GalleryContainer>
             <Img fluid={this.props.data.galleryOne.childImageSharp.fluid} />
