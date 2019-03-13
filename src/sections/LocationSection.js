@@ -81,16 +81,27 @@ const AccommodationArray = [
   {
     name: "Ritz Carlton Laguna Niguel",
     link: "www.ritzcarlton.com",
+    linkText: "ritzcarlton.com",
   },
   {
     name: "St. Regis Monarch Beach",
     link: "www.monarchbeachresort.com",
+    linkText: "monarchbeachresort.com",
   },
-  { name: "Best Western Inn Casablanca", link: "www.bestwestern.com" },
-  { name: "Doubletree Dana Point", link: "www.doubletree3.hilton.com" },
+  {
+    name: "Best Western Inn Casablanca",
+    link: "www.bestwestern.com",
+    linkText: "bestwestern.com",
+  },
+  {
+    name: "Doubletree Dana Point",
+    link: "doubletree3.hilton.com/en/index.html",
+    linkText: "doubletree3.hilton.com",
+  },
   {
     name: "Residence Inn Dana Point San Juan Capistrano",
     link: "www.marriott.com",
+    linkText: "marriott.com",
   },
 ];
 
@@ -131,7 +142,7 @@ const LocationSection = () => (
             <SingleAccommodation>
               <StyledH3>{i.name}</StyledH3>
               <AccommodationLink target="_blank" href={`https://${i.link}`}>
-                {i.link}
+                {i.linkText}
               </AccommodationLink>
             </SingleAccommodation>
           ))}
