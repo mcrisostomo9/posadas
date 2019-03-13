@@ -58,13 +58,13 @@ const StyledH3 = styled(H3)`
   }
 `;
 
-const H4 = styled.h4`
+const OtherAccommodationTitle = styled(StyledH3)`
   color: #000;
-  font-size: 16px;
+  font-size: 14px;
 
   ${mq.a1200} {
-    font-size: 18px;
-    margin-bottom: 12px;
+    font-size: 16px;
+    margin-bottom: 8px;
   }
 `;
 
@@ -178,6 +178,7 @@ const LocationSection = () => (
             i =>
               !i.description && (
                 <OtherAccommodation>
+                  <Description>{i.name}</Description>
                   <AccommodationLink target="_blank" href={`https://${i.link}`}>
                     {i.linkText}
                   </AccommodationLink>
