@@ -92,6 +92,13 @@ const AccommodationLink = styled.a`
   }
 `;
 
+const OtherLinks = styled.a`
+  font-size: 14px;
+  font-family: Raleway, sans-serif;
+  text-decoration: underline;
+  color: #000;
+`;
+
 const Description = styled(P)`
   font-size: 14px !important;
   width: 100%;
@@ -179,9 +186,9 @@ const LocationSection = () => (
               !i.description && (
                 <OtherAccommodation>
                   <Description>{i.name}</Description>
-                  <AccommodationLink target="_blank" href={`https://${i.link}`}>
+                  <OtherLinks target="_blank" href={`https://${i.link}`}>
                     {i.linkText}
-                  </AccommodationLink>
+                  </OtherLinks>
                 </OtherAccommodation>
               )
           )}
