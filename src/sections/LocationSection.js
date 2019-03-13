@@ -59,12 +59,8 @@ const StyledH3 = styled(H3)`
 `;
 
 const OtherAccommodationTitle = styled(StyledH3)`
-  color: #000;
-  font-size: 14px;
-
   ${mq.a1200} {
-    font-size: 16px;
-    margin-bottom: 8px;
+    margin: 8px 0;
   }
 `;
 
@@ -180,7 +176,9 @@ const LocationSection = () => (
               {AccommodationArray[0].linkText}
             </AccommodationLink>
           </SingleAccommodation>
-          <StyledH3>Additional Accommodations</StyledH3>
+          <OtherAccommodationTitle>
+            Additional Accommodations
+          </OtherAccommodationTitle>
           {AccommodationArray.map(
             i =>
               !i.description && (
