@@ -2,26 +2,37 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const TitleContainer = styled.div`
+const TitleContainer = styled.nav`
   z-index: 1;
-  padding-top: 20px;
   background: #fff;
   position: fixed;
   text-align: center;
   width: 100%;
   border-bottom: 1px solid #c3bb9f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   a {
+    color: black;
     text-decoration: none;
-    color: #000;
+  }
+
+  h1 {
+    padding-top: 20px;
   }
 `;
 
-const StickyNav = () => (
-  <TitleContainer>
-    <Link to="/">
-      <h1>THIS IS POSADAS</h1>
-    </Link>
-  </TitleContainer>
-);
+class StickyNav extends React.Component {
+  render() {
+    return (
+      <TitleContainer>
+        <Link to="/">
+          <h1>THIS IS POSADAS</h1>
+        </Link>
+      </TitleContainer>
+    );
+  }
+}
 
 export default StickyNav;

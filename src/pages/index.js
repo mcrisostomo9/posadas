@@ -9,12 +9,14 @@ import HowWeMetSection from "../sections/HowWeMetSection";
 import LocationSection from "../sections/LocationSection";
 import RsvpSection from "../sections/RsvpSection";
 import ImageSection from "../sections/ImageSection";
+import BurgerMenu from "../components/burgerMenu";
 
 class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
         <SEO keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]} />
+        <BurgerMenu />
         <HeroSection />
         <CeremonyDateSection />
         <AgendaSection />

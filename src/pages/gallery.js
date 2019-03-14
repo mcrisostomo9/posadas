@@ -1,6 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import styled from "styled-components";
 
 import Layout from "../components/layout";
@@ -9,6 +9,7 @@ import GalleryContainer from "../components/GalleryContainer";
 import P from "../components/P";
 import mq from "../utils/breakpoints";
 import StickyNav from "../components/StickyNav";
+import BurgerMenu from "../components/burgerMenu";
 
 const PageContainer = styled.div`
   padding: 20px 10px;
@@ -41,6 +42,8 @@ class GalleryPage extends React.Component {
       <Layout>
         <SEO title="Engagement Photos" />
         <StickyNav />
+        <BurgerMenu />
+
         <PageContainer>
           <GalleryContainer>
             <Img fluid={this.props.data.galleryOne.childImageSharp.fluid} />
