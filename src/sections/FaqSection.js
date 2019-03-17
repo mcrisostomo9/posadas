@@ -81,51 +81,45 @@ const LinkContainer = styled.div`
   }
 `;
 
-class FaqSection extends React.Component {
-  render() {
-    return (
-      <StaticQuery
-        query={graphql`
-          query {
-            rsvp: file(relativePath: { eq: "faq.jpg" }) {
-              childImageSharp {
-                fluid(maxWidth: 1980) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
+const FaqSection = () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        rsvp: file(relativePath: { eq: "faq.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1980) {
+              ...GatsbyImageSharpFluid
             }
           }
-        `}
-        render={data => (
-          <StyledInformationContainer>
-            <Gallery>
-              <Img
-                fluid={data.rsvp.childImageSharp.fluid}
-                style={{ height: "100%" }}
-              />
-              <TextContainer>
-                <Link to="/faqs">
-                  <InvertedButton>FAQs</InvertedButton>
-                </Link>
-                {/*<Invisible>Website by markus</Invisible>*/}
-              </TextContainer>
-            </Gallery>
-            <RSVP>
-              <LinkContainer>
-                <RegistryLink
-                  href="https://www.theknot.com/us/thisisposadas2019/registry"
-                  target="_blank"
-                >
-                  <Button>Registry</Button>
-                </RegistryLink>
-                {/*<Invisible>Website by markus</Invisible>*/}
-              </LinkContainer>
-            </RSVP>
-          </StyledInformationContainer>
-        )}
-      />
-    );
-  }
-}
+        }
+      }
+    `}
+    render={data => (
+      <StyledInformationContainer>
+        <Gallery>
+          <Img
+            fluid={data.rsvp.childImageSharp.fluid}
+            style={{ height: "100%" }}
+          />
+          <TextContainer>
+            <Link to="/faqs">
+              <InvertedButton>FAQs</InvertedButton>
+            </Link>
+          </TextContainer>
+        </Gallery>
+        <RSVP>
+          <LinkContainer>
+            <RegistryLink
+              href="https://www.theknot.com/us/thisisposadas2019/registry"
+              target="_blank"
+            >
+              <Button>Registry</Button>
+            </RegistryLink>
+          </LinkContainer>
+        </RSVP>
+      </StyledInformationContainer>
+    )}
+  />
+);
 
 export default FaqSection;
