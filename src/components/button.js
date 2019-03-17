@@ -22,4 +22,14 @@ const Button = styled.button`
   }
 `;
 
+export const InvertedButton = styled(Button)`
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+
+  :hover {
+    border: 1px solid #000;
+    background: #000;
+  }
+`;
 export default Button;

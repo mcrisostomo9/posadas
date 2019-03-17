@@ -1,6 +1,5 @@
 import React from "react";
 import { graphql, StaticQuery, Link } from "gatsby";
-import { ReactTypeformEmbed } from "react-typeform-embed";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import {
@@ -64,25 +63,31 @@ const TextContainer = styled.div`
   }
 `;
 
-const Invisible = styled.div`
-  color: transparent;
+const RegistryLink = styled.a`
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  max-width: 175px;
 `;
 
-class RsvpSection extends React.Component {
-  constructor(props) {
-    super(props);
-    this.openForm = this.openForm.bind(this);
-  }
+const LinkContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 
-  openForm() {
-    this.typeformEmbed.typeform.open();
+  div {
+    width: 100%;
   }
+`;
+
+class FaqSection extends React.Component {
   render() {
     return (
       <StaticQuery
         query={graphql`
           query {
-            rsvp: file(relativePath: { eq: "rsvp.jpg" }) {
+            rsvp: file(relativePath: { eq: "faq.jpg" }) {
               childImageSharp {
                 fluid(maxWidth: 1980) {
                   ...GatsbyImageSharpFluid
@@ -93,32 +98,29 @@ class RsvpSection extends React.Component {
         `}
         render={data => (
           <StyledInformationContainer>
-            <RSVP>
-              <ReactTypeformEmbed
-                popup
-                autoOpen={false}
-                url="https://markcrisostomo.typeform.com/to/OI4QVz"
-                hideHeaders
-                hideFooter
-                ref={tf => {
-                  this.typeformEmbed = tf;
-                }}
-              />
-              <Button onClick={this.openForm}>RSVP</Button>
-              <P>Please RSVP by July 1st</P>
-            </RSVP>
             <Gallery>
               <Img
                 fluid={data.rsvp.childImageSharp.fluid}
                 style={{ height: "100%" }}
               />
               <TextContainer>
-                <Link to="/gallery">
-                  <Button>View Gallery</Button>
+                <Link to="/faqs">
+                  <InvertedButton>FAQs</InvertedButton>
                 </Link>
-                <Invisible>Website by markus</Invisible>
+                {/*<Invisible>Website by markus</Invisible>*/}
               </TextContainer>
             </Gallery>
+            <RSVP>
+              <LinkContainer>
+                <RegistryLink
+                  href="https://www.theknot.com/us/thisisposadas2019/registry"
+                  target="_blank"
+                >
+                  <Button>Registry</Button>
+                </RegistryLink>
+                {/*<Invisible>Website by markus</Invisible>*/}
+              </LinkContainer>
+            </RSVP>
           </StyledInformationContainer>
         )}
       />
@@ -126,4 +128,4 @@ class RsvpSection extends React.Component {
   }
 }
 
-export default RsvpSection;
+export default FaqSection;
