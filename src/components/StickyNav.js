@@ -19,7 +19,10 @@ const TitleContainer = styled.nav`
     text-decoration: none;
   }
 
-  h1 {
+  div {
+    font-family: "Playfair Display", -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
     padding: 20px;
     font-size: 20px;
     margin: 0;
@@ -41,7 +44,7 @@ class StickyNav extends React.Component {
     return (
       <TitleContainer>
         <Link to="/">
-          <h1>THIS IS POSADAS</h1>
+          <div>THIS IS POSADAS</div>
         </Link>
       </TitleContainer>
     );
