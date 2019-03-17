@@ -6,12 +6,9 @@ import {
   InformationBox,
   InformationContainer,
 } from "../components/InformationContainer";
-import P from "../components/P";
 import Button, { InvertedButton } from "../components/button";
 
 const StyledInformationContainer = styled(InformationContainer)`
-  flex-direction: column-reverse;
-
   a {
     width: 100%;
     height: 100%;
