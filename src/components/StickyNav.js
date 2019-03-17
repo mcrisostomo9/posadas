@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import mq from "../utils/breakpoints";
 
 const TitleContainer = styled.nav`
   z-index: 1;
@@ -19,7 +20,19 @@ const TitleContainer = styled.nav`
   }
 
   h1 {
-    padding-top: 20px;
+    padding: 20px;
+    font-size: 20px;
+    margin: 0;
+
+    ${mq.a1200} {
+      padding: 20px 30px;
+      font-size: 23px;
+    }
+
+    ${mq.a1400} {
+      padding: 20px 30px;
+      font-size: 26px;
+    }
   }
 `;
 

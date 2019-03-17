@@ -31,6 +31,10 @@ const Accommodation = styled(InformationBox)`
   :hover {
     filter: none;
   }
+
+  ${mq.a768} {
+    padding: 0;
+  }
 `;
 
 const TextContainer = styled.div`

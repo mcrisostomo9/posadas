@@ -10,12 +10,12 @@ const BurgerContainer = styled.div`
     width: 36px;
     height: 30px;
     right: 36px;
-    top: 36px;
+    top: 20px;
   }
 
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #373a47;
+    background: #000;
   }
 
   /* Color/shape of burger icon bars on hover*/
@@ -76,6 +76,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
     text-decoration: none;
     font-family: Raleway, sans-serif;
     margin-bottom: 16px;
+    outline: none;
   }
 `;
 
