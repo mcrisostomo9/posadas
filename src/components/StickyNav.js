@@ -24,12 +24,11 @@ const TitleContainer = styled.nav`
       Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
       sans-serif;
     padding: 20px;
-    font-size: 20px;
+    font-size: 23px;
     margin: 0;
 
     ${mq.a1200} {
       padding: 20px 30px;
-      font-size: 23px;
     }
 
     ${mq.a1400} {
