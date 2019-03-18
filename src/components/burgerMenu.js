@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React from "react";
 import { Link } from "gatsby";
-import { slide as Menu } from "react-burger-menu";
+import { stack as Menu } from "react-burger-menu";
 
 const BurgerContainer = styled.div`
   /* Position and sizing of burger button */
