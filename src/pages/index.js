@@ -16,7 +16,10 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <SEO keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]} />
+        <SEO
+          keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]}
+          title="This is Posadas"
+        />
         <BurgerMenu />
         <HeroSection />
         <CeremonyDateSection />
