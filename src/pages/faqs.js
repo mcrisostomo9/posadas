@@ -41,6 +41,18 @@ const Question = styled.div`
   }
 `;
 
+const StyledP = styled(P)`
+  font-size: 13px;
+
+  ${mq.a768} {
+    font-size: 16px;
+  }
+
+  ${mq.a1200} {
+    font-size: 18px;
+  }
+`;
+
 const faq = [
   {
     question: "RSVP Deadline",
@@ -101,12 +113,12 @@ const FaqsPage = () => (
           {faq.map(i => (
             <SingleFaqContainer>
               <Question>{i.question}</Question>
-              <P>{i.answer}</P>
+              <StyledP>{i.answer}</StyledP>
             </SingleFaqContainer>
           ))}
         </div>
-        <P>
-          For more information on the venue, please visit the website at{" "}
+        <StyledP>
+          For more information on the venue, please visit the website at
           <a
             href="http://thecasinosanclemente.com/"
             target="_blank"
@@ -114,7 +126,7 @@ const FaqsPage = () => (
           >
             www.thecasinosanclemente.com
           </a>
-        </P>
+        </StyledP>
       </FaqContainer>
     </PageContainer>
   </Layout>

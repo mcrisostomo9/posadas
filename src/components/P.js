@@ -11,6 +11,11 @@ const P = styled.p`
   ${mq.a1200} {
     font-size: 20px;
   }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
 `;
 
 export default P;
