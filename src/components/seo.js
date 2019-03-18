@@ -1,7 +1,7 @@
-import React from "react"
-import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
+import { StaticQuery, graphql } from "gatsby";
 
 function SEO({ description, lang, meta, keywords }) {
   return (
@@ -9,13 +9,13 @@ function SEO({ description, lang, meta, keywords }) {
       query={detailsQuery}
       render={data => {
         const metaDescription =
-          description || data.site.siteMetadata.description
+          description || data.site.siteMetadata.description;
         return (
           <Helmet
             htmlAttributes={{
               lang,
             }}
-            title={data.site.siteMetadata.title}
+            title={data.site.siteMetadata.question}
             meta={[
               {
                 name: `description`,
@@ -23,7 +23,7 @@ function SEO({ description, lang, meta, keywords }) {
               },
               {
                 property: `og:title`,
-                content: data.site.siteMetadata.title,
+                content: data.site.siteMetadata.question,
               },
               {
                 property: `og:description`,
@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, keywords }) {
               },
               {
                 name: `twitter:title`,
-                content: data.site.siteMetadata.title,
+                content: data.site.siteMetadata.question,
               },
               {
                 name: `twitter:description`,
@@ -60,27 +60,27 @@ function SEO({ description, lang, meta, keywords }) {
               )
               .concat(meta)}
           />
-        )
+        );
       }}
     />
-  )
+  );
 }
 
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-}
+};
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string,
-}
+  question: PropTypes.string,
+};
 
-export default SEO
+export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
@@ -92,4 +92,4 @@ const detailsQuery = graphql`
       }
     }
   }
-`
+`;
