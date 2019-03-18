@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    question: `This is Posadas`,
+    title: `This is Posadas`,
     description: `This Website is powered by Gatsby the dog`,
     author: `@gatsbyjs`,
   },
