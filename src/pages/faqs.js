@@ -22,7 +22,7 @@ const PageContainer = styled.div`
 `;
 
 const SingleFaqContainer = styled.div`
-  margin-bottom: 16px;
+  margin-bottom: 30px;
 `;
 
 const Question = styled.div`
