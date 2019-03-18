@@ -87,17 +87,16 @@ const faq = [
   {
     question: "Photos & Social Media",
     answer:
-      "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout of the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception, and please be sure tag each photo on social media with our wedding hashtag, #ThisIsPosadas2019 so we can keep track of all of your photos!",
+      "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure tag each photo on social media with our wedding hashtag, #ThisIsPosadas2019 so we can keep track of all of your photos!",
   },
   {
     question: "Cash Bar",
     answer:
-      "We so look forward to dancing the night away with you! Please note we will be offering a full selection of cocktails, beer, and wine until 10 p.m., at which point the bar will turn over into a cash bar.",
+      "Please note we will be offering a full selection of cocktails, beer, and wine until 10 p.m., at which point there will be open bar for beer and wine only, and cash bar for cocktails.",
   },
   {
     question: "Registry",
-    answer:
-      "We’re so lucky to be able to spend our wedding day with all of our friends and family; your presence is truly all the present we need. Because we have all the basic household supplies covered, if you’d like to get us a gift to celebrate, we’ve created a registry fund [insert the knot link here] that we’ll use to build our life together.",
+    answer: `We’re so lucky to be able to spend our wedding day with all of our friends and family; your presence is truly all the present we need. Because we have all the basic household supplies covered, if you’d like to get us a gift to celebrate, we’ve created a registry fund at theknot.com/us/thisisposadas2019/registry that we’ll use to build our life together.`,
   },
 ];
 
