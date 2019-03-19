@@ -126,6 +126,7 @@ const FaqsPage = () => (
                   <a
                     href="https://theknot.com/us/thisisposadas2019/registry"
                     target="_blank"
+                    rel="noopener noreferrer"
                   >
                     theknot.com
                   </a>{" "}

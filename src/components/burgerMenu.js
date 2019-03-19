@@ -92,9 +92,9 @@ const BurgerMenu = () => (
       <Link id="faqs" className="menu-item" to="/faqs">
         FAQs
       </Link>
-      {/*<Link id="bridalparty" className="menu-item" to="/bridalparty">*/}
-      {/*Bridal Party*/}
-      {/*</Link>*/}
+      <Link id="bridalparty" className="menu-item" to="/bridalparty">
+        Bridal Party
+      </Link>
       {/*<Link id="sponsors" className="menu-item" to="/sponsors">*/}
       {/*Sponsors*/}
       {/*</Link>*/}

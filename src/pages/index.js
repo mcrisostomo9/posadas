@@ -30,7 +30,7 @@ class IndexPage extends React.Component {
         <LocationSection />
         <RsvpSection />
         <FaqSection />
-        {/*<BridalSponsorsSection />*/}
+        <BridalSponsorsSection />
       </Layout>
     );
   }

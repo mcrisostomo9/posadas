@@ -6,7 +6,6 @@ import StickyNav from "../components/StickyNav";
 import SEO from "../components/seo";
 import BurgerMenu from "../components/burgerMenu";
 import styled from "styled-components";
-import P from "../components/P";
 import mq from "../utils/breakpoints";
 
 const ImgContainer = styled.div`
@@ -16,24 +15,54 @@ const ImgContainer = styled.div`
 
 const TextContainer = styled.div`
   width: 100%;
-  max-width: 1200px;
-  margin: 70px auto 20px;
+  margin: 0;
   text-align: center;
+  padding: 0 10px;
+
+  ${mq.a768} {
+    margin: 50px auto 20px;
+  }
+
+  ${mq.a1400} {
+    padding: 0;
+  }
 `;
 
 const PageContainer = styled.div`
-  padding: 20px 0;
+  padding: 20px 0 0;
   text-align: center;
   position: relative;
   z-index: 0;
   display: flex;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   flex-direction: column;
 
   ${mq.a1200} {
+    padding: 20px 0 0;
+  }
+`;
+
+const SectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+
+  ${mq.a992} {
     flex-direction: row;
-    padding: 20px 10px;
+    margin-bottom: 0;
+  }
+`;
+
+const BridalPartySection = styled(SectionContainer)`
+  margin-bottom: 30px;
+`;
+
+const SponsorSectionContainer = styled(SectionContainer)`
+  flex-direction: column-reverse;
+  ${mq.a992} {
+    flex-direction: row;
   }
 `;
 
@@ -41,14 +70,21 @@ const Title = styled.h2`
   font-family: "Playfair Display", -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
+  text-transform: uppercase;
 `;
 
 const Subtitle = styled.h3`
   font-family: "Raleway", sans-serif;
+  text-decoration: underline;
 `;
 
 const PartyContainer = styled.div`
   display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  ${mq.a992} {
+    flex-direction: row;
+  }
 `;
 
 const NamesContainer = styled.div`
@@ -56,15 +92,11 @@ const NamesContainer = styled.div`
   flex-direction: column;
 `;
 
-const StyledP = styled(P)`
-  font-size: 13px;
+const StyledP = styled.p`
+  font-size: 14px;
 
-  ${mq.a768} {
+  ${mq.a1400} {
     font-size: 16px;
-  }
-
-  ${mq.a1200} {
-    font-size: 18px;
   }
 `;
 
@@ -90,11 +122,31 @@ const groomsmenArray = [
   "Brandyn Young",
 ];
 
+const brideSponsorArray = [
+  "Rey Patawaran & Jennifer Galang",
+  "Melvin Sangalang & Carol Patawaran Kondro",
+  "Cenon Dela Cruz & Rosanne Aniete Ramos",
+  "Nonato Manipon & Leila Soohoo",
+];
+
+const groomSponsorArray = [
+  "Lito Posadas & Arlene Posadas",
+  "Joe Mocilac & Susan Mocilac",
+  "Diego Quaglierini & Leila Quaglierini",
+];
+
 const BridalPartyPage = () => (
   <StaticQuery
     query={graphql`
       query {
-        hero: file(relativePath: { eq: "gallery26.jpg" }) {
+        bridalSection: file(relativePath: { eq: "gallery26.jpg" }) {
+          childImageSharp {
+            fluid(maxHeight: 2000) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        sponsorsSection: file(relativePath: { eq: "gallery15.jpg" }) {
           childImageSharp {
             fluid(maxHeight: 2000) {
               ...GatsbyImageSharpFluid
@@ -105,31 +157,54 @@ const BridalPartyPage = () => (
     `}
     render={data => (
       <Layout>
-        <SEO title="Bridal Party" />
+        <SEO title="Bridal Party | Sponsors" />
         <StickyNav />
         <BurgerMenu />
         <PageContainer>
-          <ImgContainer>
-            sd
-            <Img fluid={data.hero.childImageSharp.fluid} />
-          </ImgContainer>
-          <TextContainer>
-            <Title>Bridal Party</Title>
-            <PartyContainer>
-              <NamesContainer>
-                <Subtitle>Bridesmaid</Subtitle>
-                {bridesmaidArray.map(i => (
-                  <StyledP>{i}</StyledP>
-                ))}
-              </NamesContainer>
-              <NamesContainer>
-                <Subtitle>Groomsmen</Subtitle>
-                {groomsmenArray.map(i => (
-                  <StyledP>{i}</StyledP>
-                ))}
-              </NamesContainer>
-            </PartyContainer>
-          </TextContainer>
+          <BridalPartySection>
+            <ImgContainer>
+              <Img fluid={data.bridalSection.childImageSharp.fluid} />
+            </ImgContainer>
+            <TextContainer>
+              <Title>Bridal Party</Title>
+              <PartyContainer>
+                <NamesContainer>
+                  <Subtitle>Bridesmaid</Subtitle>
+                  {bridesmaidArray.map(i => (
+                    <StyledP>{i}</StyledP>
+                  ))}
+                </NamesContainer>
+                <NamesContainer>
+                  <Subtitle>Groomsmen</Subtitle>
+                  {groomsmenArray.map(i => (
+                    <StyledP>{i}</StyledP>
+                  ))}
+                </NamesContainer>
+              </PartyContainer>
+            </TextContainer>
+          </BridalPartySection>
+          <SponsorSectionContainer>
+            <TextContainer>
+              <Title>Sponsors</Title>
+              <PartyContainer>
+                <NamesContainer>
+                  <Subtitle>Bride</Subtitle>
+                  {brideSponsorArray.map(i => (
+                    <StyledP>{i}</StyledP>
+                  ))}
+                </NamesContainer>
+                <NamesContainer>
+                  <Subtitle>Groom</Subtitle>
+                  {groomSponsorArray.map(i => (
+                    <StyledP>{i}</StyledP>
+                  ))}
+                </NamesContainer>
+              </PartyContainer>
+            </TextContainer>
+            <ImgContainer>
+              <Img fluid={data.sponsorsSection.childImageSharp.fluid} />
+            </ImgContainer>
+          </SponsorSectionContainer>
         </PageContainer>
       </Layout>
     )}
