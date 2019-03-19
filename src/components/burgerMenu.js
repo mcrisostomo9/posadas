@@ -95,9 +95,6 @@ const BurgerMenu = () => (
       <Link id="bridalparty" className="menu-item" to="/bridalparty">
         Bridal Party
       </Link>
-      {/*<Link id="sponsors" className="menu-item" to="/sponsors">*/}
-      {/*Sponsors*/}
-      {/*</Link>*/}
     </Menu>
   </BurgerContainer>
 );
