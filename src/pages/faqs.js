@@ -9,7 +9,7 @@ import mq from "../utils/breakpoints";
 
 const FaqContainer = styled.div`
   width: 100%;
-  max-width: 1200px;
+  max-width: 700px;
   margin: 70px auto 20px;
   text-align: center;
 `;
@@ -37,7 +37,7 @@ const Question = styled.div`
   }
 
   ${mq.a1200} {
-    font-size: 22px;
+    font-size: 20px;
   }
 `;
 
@@ -49,7 +49,7 @@ const StyledP = styled(P)`
   }
 
   ${mq.a1200} {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 

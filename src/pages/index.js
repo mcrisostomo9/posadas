@@ -11,6 +11,7 @@ import RsvpSection from "../sections/RsvpSection";
 import ImageSection from "../sections/ImageSection";
 import BurgerMenu from "../components/burgerMenu";
 import FaqSection from "../sections/FaqSection";
+import BridalSponsorsSection from "../sections/BridalSponsorsSection";
 
 class IndexPage extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class IndexPage extends React.Component {
         <LocationSection />
         <RsvpSection />
         <FaqSection />
+        {/*<BridalSponsorsSection />*/}
       </Layout>
     );
   }
