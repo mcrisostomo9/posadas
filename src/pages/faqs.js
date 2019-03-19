@@ -51,6 +51,10 @@ const StyledP = styled(P)`
   ${mq.a1200} {
     font-size: 16px;
   }
+
+  a {
+    font-weight: bold;
+  }
 `;
 
 const faq = [
@@ -112,12 +116,29 @@ const FaqsPage = () => (
           {faq.map(i => (
             <SingleFaqContainer>
               <Question>{i.question}</Question>
-              <StyledP>{i.answer}</StyledP>
+              {i.question === "Registry" ? (
+                <StyledP>
+                  We’re so lucky to be able to spend our wedding day with all of
+                  our friends and family; your presence is truly all the present
+                  we need. Because we have all the basic household supplies
+                  covered, if you’d like to get us a gift to celebrate, we’ve
+                  created a registry fund at{" "}
+                  <a
+                    href="https://theknot.com/us/thisisposadas2019/registry"
+                    target="_blank"
+                  >
+                    theknot.com
+                  </a>{" "}
+                  that we’ll use to build our life together.
+                </StyledP>
+              ) : (
+                <StyledP>{i.answer}</StyledP>
+              )}
             </SingleFaqContainer>
           ))}
         </div>
         <StyledP>
-          For more information on the venue, please visit the website at
+          For more information on the venue, please visit the website at{" "}
           <a
             href="http://thecasinosanclemente.com/"
             target="_blank"
