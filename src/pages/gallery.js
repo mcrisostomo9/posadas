@@ -64,9 +64,6 @@ class GalleryPage extends React.Component {
             <Img fluid={this.props.data.gallery10.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery11.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery12.childImageSharp.fluid} />
-            <Img fluid={this.props.data.gallery13.childImageSharp.fluid} />
-            <Img fluid={this.props.data.gallery14.childImageSharp.fluid} />
-            <Img fluid={this.props.data.gallery15.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery16.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery17.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery18.childImageSharp.fluid} />
@@ -76,6 +73,9 @@ class GalleryPage extends React.Component {
             <Img fluid={this.props.data.gallery29.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery28.childImageSharp.fluid} />
             <Img fluid={this.props.data.gallery30.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery13.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery14.childImageSharp.fluid} />
+            <Img fluid={this.props.data.gallery15.childImageSharp.fluid} />
           </GalleryContainer>
           <P>Photography by Arjay Bernardino</P>
           <a
