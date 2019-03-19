@@ -92,7 +92,7 @@ const faq = [
   {
     question: "Cash Bar",
     answer:
-      "Please note we will be offering a full selection of cocktails, beer, and wine until 10 p.m., at which point there will be open bar for beer and wine only, and cash bar for cocktails.",
+      "Please note we will be offering a full selection of cocktails, beer, and wine until 10 p.m., at which point the bar will turn over into a cash bar.",
   },
   {
     question: "Registry",
