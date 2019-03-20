@@ -5,6 +5,7 @@ const H3 = styled.h3`
   font-weight: 400;
   margin: 0 0 8px;
   font-size: 18px;
+  text-transform: uppercase;
 
   ${mq.a768} {
     font-size: 20px;

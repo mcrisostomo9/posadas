@@ -11,6 +11,7 @@ const Button = styled.button`
   font-size: 18px;
   line-height: normal;
   padding: 5px 0;
+  text-transform: uppercase;
 
   :hover {
     background: #000;

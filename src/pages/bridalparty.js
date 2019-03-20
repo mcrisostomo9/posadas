@@ -7,6 +7,7 @@ import SEO from "../components/seo";
 import BurgerMenu from "../components/burgerMenu";
 import styled from "styled-components";
 import mq from "../utils/breakpoints";
+import H3 from "../components/H3";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -71,11 +72,10 @@ const Title = styled.h2`
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
     sans-serif;
   text-transform: uppercase;
-`;
 
-const Subtitle = styled.h3`
-  font-family: "Raleway", sans-serif;
-  text-decoration: underline;
+  ${mq.a1400} {
+    font-size: 24px;
+  }
 `;
 
 const PartyContainer = styled.div`
@@ -90,6 +90,8 @@ const PartyContainer = styled.div`
 const NamesContainer = styled.div`
   display: flex;
   flex-direction: column;
+  margin-bottom: 16px;
+  padding: 0 16px;
 `;
 
 const StyledP = styled.p`
@@ -169,13 +171,13 @@ const BridalPartyPage = () => (
               <Title>Bridal Party</Title>
               <PartyContainer>
                 <NamesContainer>
-                  <Subtitle>Bridesmaid</Subtitle>
+                  <H3>Bridesmaid</H3>
                   {bridesmaidArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
                 </NamesContainer>
                 <NamesContainer>
-                  <Subtitle>Groomsmen</Subtitle>
+                  <H3>Groomsmen</H3>
                   {groomsmenArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
@@ -188,13 +190,13 @@ const BridalPartyPage = () => (
               <Title>Sponsors</Title>
               <PartyContainer>
                 <NamesContainer>
-                  <Subtitle>Bride</Subtitle>
+                  <H3>Bride</H3>
                   {brideSponsorArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
                 </NamesContainer>
                 <NamesContainer>
-                  <Subtitle>Groom</Subtitle>
+                  <H3>Groom</H3>
                   {groomSponsorArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}

@@ -19,11 +19,6 @@ const StyledInformationContainer = styled(InformationContainer)`
     color: #fff;
   }
 
-  h3 {
-    font-size: 34px;
-    font-weight: 400;
-  }
-
   flex-direction: column-reverse;
 
   ${mq.a768} {
@@ -69,6 +64,12 @@ const TextContainer = styled.div`
   }
 `;
 
+const StyledP = styled(P)`
+  ${mq.a1200} {
+    font-size: 18px;
+  }
+`;
+
 const BridalSponsorsSection = () => (
   <StaticQuery
     query={graphql`
@@ -87,11 +88,11 @@ const BridalSponsorsSection = () => (
         <ThingsToDoSquare>
           <TextContainer>
             <H3>Things to do</H3>
-            <P>San Clemente State Beach & Pier</P>
-            <P>San Onofre State Beach</P>
-            <P>T-Street Beach</P>
-            <P>Dana Point Harbor</P>
-            <P>Mission San Juan Capistrano</P>
+            <StyledP>San Clemente State Beach & Pier</StyledP>
+            <StyledP>San Onofre State Beach</StyledP>
+            <StyledP>T-Street Beach</StyledP>
+            <StyledP>Dana Point Harbor</StyledP>
+            <StyledP>Mission San Juan Capistrano</StyledP>
           </TextContainer>
         </ThingsToDoSquare>
         <BridalSquare>
