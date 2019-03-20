@@ -35,7 +35,7 @@ const PageContainer = styled.div`
   position: relative;
   z-index: 0;
   display: flex;
-  max-width: 1400px;
+  max-width: 1680px;
   margin: 0 auto;
   flex-direction: column;
 
@@ -80,7 +80,7 @@ const Title = styled.h2`
 
 const PartyContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   flex-direction: column;
   ${mq.a992} {
     flex-direction: row;
