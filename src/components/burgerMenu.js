@@ -4,6 +4,9 @@ import { Link } from "gatsby";
 import { stack as Menu } from "react-burger-menu";
 
 const BurgerContainer = styled.div`
+  a {
+    font-family: "Playfair Display", sans-serif !important;
+  }
   /* Position and sizing of burger button */
   .bm-burger-button {
     position: fixed;
