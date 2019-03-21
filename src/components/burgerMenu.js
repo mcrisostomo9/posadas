@@ -6,6 +6,7 @@ import { stack as Menu } from "react-burger-menu";
 const BurgerContainer = styled.div`
   a {
     font-family: "Playfair Display", sans-serif !important;
+    text-transform: uppercase;
   }
   /* Position and sizing of burger button */
   .bm-burger-button {

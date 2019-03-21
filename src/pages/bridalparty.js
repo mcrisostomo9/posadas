@@ -19,6 +19,9 @@ const TextContainer = styled.div`
   margin: 0;
   text-align: center;
   padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   ${mq.a768} {
     margin: 50px auto 20px;
@@ -80,7 +83,7 @@ const Title = styled.h2`
 
 const PartyContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-direction: column;
   ${mq.a992} {
     flex-direction: row;

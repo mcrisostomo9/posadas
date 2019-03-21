@@ -30,6 +30,10 @@ const Title = styled.h1`
     font-size: 48px;
   }
 
+  ${mq.a1400} {
+    font-size: 64px;
+  }
+
   ${mq.a1600} {
     top: 40%;
   }
