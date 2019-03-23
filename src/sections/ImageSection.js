@@ -36,13 +36,19 @@ const OverlayText = styled.div`
   font-family: "Playfair Display", serif;
   font-size: 36px;
   width: 100%;
+  padding-top: 50px;
 
-  ${mq.a1200} {
+  ${mq.a768} {
     font-size: 48px;
   }
 
-  ${mq.a1400} {
+  ${mq.a1200} {
     font-size: 64px;
+    padding-top: 80px;
+  }
+
+  ${mq.a1400} {
+    font-size: 72px;
   }
 `;
 

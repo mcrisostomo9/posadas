@@ -26,12 +26,16 @@ const Title = styled.h1`
   font-family: "Playfair Display", serif;
   font-size: 36px;
 
-  ${mq.a1200} {
+  ${mq.a768} {
     font-size: 48px;
   }
 
-  ${mq.a1400} {
+  ${mq.a1200} {
     font-size: 64px;
+  }
+
+  ${mq.a1400} {
+    font-size: 72px;
   }
 
   ${mq.a1600} {
