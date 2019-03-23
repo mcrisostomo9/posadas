@@ -107,24 +107,30 @@ const StyledP = styled.p`
 
 const bridesmaidArray = [
   "Katriana Sangalang | Maid of Honor",
-  "Angela Sangalang",
-  "Breanna Posadas",
-  "Raiza Pimentel",
-  "Pauline Limtaveemongkol",
   "Jayanne Abejo",
+
   "Micah Diamsay",
+  "Pauline Limtaveemongkol",
+
+  "Raiza Pimentel",
+
+  "Breanna Posadas",
+  "Angela Sangalang",
 ];
 
 const groomsmenArray = [
   "Justin Kiat | Best Man",
-  "Kenny Lawson",
   "Danny Darkoski",
-  "James Thompson",
+  "Albert Hernandez",
+
   "Casey Isaac",
-  "Keith Young",
-  "Albert Martinez",
+  "Kenny Lawson",
+
   "Jonathan McCormick",
+  "James Thompson",
+
   "Brandyn Young",
+  "Keith Young",
 ];
 
 const brideSponsorArray = [
