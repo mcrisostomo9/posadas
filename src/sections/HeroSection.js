@@ -8,6 +8,10 @@ const Container = styled.div`
   position: relative;
   height: 100vh;
 
+  ${mq.a992} {
+    height: auto;
+  }
+
   ${mq.a1600} {
     height: 1050px;
   }
@@ -32,14 +36,11 @@ const Title = styled.h1`
 
   ${mq.a1200} {
     font-size: 64px;
+    top: 40%;
   }
 
   ${mq.a1400} {
     font-size: 72px;
-  }
-
-  ${mq.a1600} {
-    top: 40%;
   }
 
   ${mq.a1800} {
