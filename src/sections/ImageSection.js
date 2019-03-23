@@ -24,6 +24,28 @@ const Container = styled.div`
   }
 `;
 
+const OverlayText = styled.div`
+  position: absolute;
+  height: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  top: 0;
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  width: 100%;
+
+  ${mq.a1200} {
+    font-size: 48px;
+  }
+
+  ${mq.a1400} {
+    font-size: 64px;
+  }
+`;
+
 const ImageSection = () => (
   <StaticQuery
     query={graphql`
@@ -43,6 +65,7 @@ const ImageSection = () => (
           fluid={data.hero.childImageSharp.fluid}
           style={{ height: "100%" }}
         />
+        <OverlayText>M & N</OverlayText>
       </Container>
     )}
   />

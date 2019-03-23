@@ -107,30 +107,24 @@ const StyledP = styled.p`
 
 const bridesmaidArray = [
   "Katriana Sangalang | Maid of Honor",
+  "Angela Sangalang",
+  "Breanna Posadas",
   "Jayanne Abejo",
-
   "Micah Diamsay",
   "Pauline Limtaveemongkol",
-
   "Raiza Pimentel",
-
-  "Breanna Posadas",
-  "Angela Sangalang",
 ];
 
 const groomsmenArray = [
   "Justin Kiat | Best Man",
-  "Danny Darkoski",
   "Albert Hernandez",
-
-  "Casey Isaac",
-  "Kenny Lawson",
-
-  "Jonathan McCormick",
-  "James Thompson",
-
   "Brandyn Young",
+  "Casey Isaac",
+  "Daniel Darkoski",
+  "James Thompson",
+  "Jonathan McCormick",
   "Keith Young",
+  "Kenneth Lawson",
 ];
 
 const brideSponsorArray = [
@@ -141,8 +135,8 @@ const brideSponsorArray = [
 ];
 
 const groomSponsorArray = [
-  "Lito Posadas & Arlene Posadas",
   "Joe Mocilac & Susan Mocilac",
+  "Barry Schiendler & Jessica Schiendler",
   "Diego Quaglierini & Leila Quaglierini",
 ];
 
@@ -180,13 +174,13 @@ const BridalPartyPage = () => (
               <Title>Bridal Party</Title>
               <PartyContainer>
                 <NamesContainer>
-                  <H3>Bridesmaid</H3>
+                  <H3>Nicole Sangalang</H3>
                   {bridesmaidArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
                 </NamesContainer>
                 <NamesContainer>
-                  <H3>Groomsmen</H3>
+                  <H3>Matthew Posadas</H3>
                   {groomsmenArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
@@ -199,13 +193,13 @@ const BridalPartyPage = () => (
               <Title>Sponsors</Title>
               <PartyContainer>
                 <NamesContainer>
-                  <H3>Bride</H3>
+                  <H3>Nicole Sangalang</H3>
                   {brideSponsorArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
                 </NamesContainer>
                 <NamesContainer>
-                  <H3>Groom</H3>
+                  <H3>Matthew Posadas</H3>
                   {groomSponsorArray.map(i => (
                     <StyledP>{i}</StyledP>
                   ))}
