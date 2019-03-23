@@ -18,7 +18,7 @@ const AgendaSection = () => (
     </Item>
     <Item>
       <H3>THE CELEBRATION</H3>
-      <P>Grand Ballroom for Dinner, Dancing, & Drinks</P>
+      <P>Grand Ballroom for Dinner, Drinks, & Dancing</P>
       <P>Semi-formal Garden Attire</P>
     </Item>
   </TextContainer>

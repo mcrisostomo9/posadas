@@ -61,7 +61,7 @@ const faq = [
   {
     question: "RSVP Deadline",
     answer:
-      "Please make sure to RSVP using the link on our website no later than July 1 st , 2019. Each person attending will need to RSVP individually on the link.",
+      "Please make sure to RSVP using the link on our website no later than July 1st, 2019. Each person attending will need to RSVP individually on the link.",
   },
   {
     question: "Plus Ones (+1)",
