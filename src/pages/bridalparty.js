@@ -8,6 +8,7 @@ import BurgerMenu from "../components/burgerMenu";
 import styled from "styled-components";
 import mq from "../utils/breakpoints";
 import H3 from "../components/H3";
+import P from "../components/P";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -97,14 +98,6 @@ const NamesContainer = styled.div`
   padding: 0 16px;
 `;
 
-const StyledP = styled.p`
-  font-size: 14px;
-
-  ${mq.a1400} {
-    font-size: 16px;
-  }
-`;
-
 const bridesmaidArray = [
   "Katriana Sangalang | Maid of Honor",
   "Angela Sangalang",
@@ -176,13 +169,13 @@ const BridalPartyPage = () => (
                 <NamesContainer>
                   <H3>Nicole Sangalang</H3>
                   {bridesmaidArray.map(i => (
-                    <StyledP>{i}</StyledP>
+                    <P>{i}</P>
                   ))}
                 </NamesContainer>
                 <NamesContainer>
                   <H3>Matthew Posadas</H3>
                   {groomsmenArray.map(i => (
-                    <StyledP>{i}</StyledP>
+                    <P>{i}</P>
                   ))}
                 </NamesContainer>
               </PartyContainer>
@@ -195,13 +188,13 @@ const BridalPartyPage = () => (
                 <NamesContainer>
                   <H3>Nicole Sangalang</H3>
                   {brideSponsorArray.map(i => (
-                    <StyledP>{i}</StyledP>
+                    <P>{i}</P>
                   ))}
                 </NamesContainer>
                 <NamesContainer>
                   <H3>Matthew Posadas</H3>
                   {groomSponsorArray.map(i => (
-                    <StyledP>{i}</StyledP>
+                    <P>{i}</P>
                   ))}
                 </NamesContainer>
               </PartyContainer>

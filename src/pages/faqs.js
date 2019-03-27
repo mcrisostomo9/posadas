@@ -48,10 +48,6 @@ const StyledP = styled(P)`
     font-size: 16px;
   }
 
-  ${mq.a1200} {
-    font-size: 16px;
-  }
-
   a {
     font-weight: bold;
   }

@@ -9,7 +9,7 @@ const Container = styled.div`
   height: 100vh;
 
   ${mq.a992} {
-    height: 1000px;
+    height: 800px;
   }
 
   ${mq.a1600} {

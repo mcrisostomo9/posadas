@@ -8,10 +8,6 @@ const P = styled.p`
     font-size: 16px;
   }
 
-  ${mq.a1200} {
-    font-size: 20px;
-  }
-
   a {
     color: #000;
     text-decoration: none;
