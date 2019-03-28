@@ -212,7 +212,6 @@ const BridalPartyPage = () => (
           </>
         ) : (
           <>
-            {" "}
             <HeroSection isAuth={false} />
           </>
         )}
