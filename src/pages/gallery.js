@@ -103,7 +103,9 @@ class GalleryPage extends React.Component {
             </PageContainer>
           </>
         ) : (
-          <HeroSection isAuth={false} />
+          <>
+            <HeroSection isAuth={false} />
+          </>
         )}
       </Layout>
     );

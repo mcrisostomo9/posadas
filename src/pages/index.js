@@ -37,7 +37,6 @@ class IndexPage extends React.Component {
           </>
         ) : (
           <>
-            <div>shoud not render</div>
             <LoginSection />
           </>
         )}

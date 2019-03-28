@@ -152,7 +152,9 @@ const FaqsPage = () => (
         </PageContainer>
       </>
     ) : (
-      <HeroSection isAuth={false} />
+      <>
+        <HeroSection isAuth={false} />
+      </>
     )}
   </Layout>
 );

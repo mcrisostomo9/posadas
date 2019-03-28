@@ -211,7 +211,10 @@ const BridalPartyPage = () => (
             </PageContainer>
           </>
         ) : (
-          <HeroSection isAuth={false} />
+          <>
+            {" "}
+            <HeroSection isAuth={false} />
+          </>
         )}
       </Layout>
     )}
