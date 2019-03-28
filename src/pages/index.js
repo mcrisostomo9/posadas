@@ -12,6 +12,7 @@ import BurgerMenu from "../components/burgerMenu";
 import FaqSection from "../sections/FaqSection";
 import BridalSponsorsSection from "../sections/BridalSponsorsSection";
 import { isLoggedIn } from "../services/auth";
+import LoginSection from "../sections/LoginSection";
 
 class IndexPage extends React.Component {
   render() {
@@ -24,7 +25,7 @@ class IndexPage extends React.Component {
         {isLoggedIn() ? (
           <>
             <BurgerMenu />
-            <HeroSection isAuth={true} />
+            <HeroSection />
             <CeremonyDateSection />
             <AgendaSection />
             <ImageSection />
@@ -35,7 +36,7 @@ class IndexPage extends React.Component {
             <BridalSponsorsSection />
           </>
         ) : (
-          <HeroSection isAuth={false} />
+          <LoginSection />
         )}
       </Layout>
     );
