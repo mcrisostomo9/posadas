@@ -21,5 +21,5 @@ export const handleLogin = ({ password }) => {
 export const isLoggedIn = () => {
   const user = getUser();
   console.log(`is auth: ${user.isAuth}`);
-  return user.isAuth;
+  return user.isAuth && !undefined;
 };
