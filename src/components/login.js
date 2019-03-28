@@ -82,9 +82,6 @@ class Login extends React.Component {
   isError = () => this.setState({ error: true });
 
   render() {
-    // if (isLoggedIn()) {
-    //   navigate(`/`);
-    // }
     const { error } = this.state;
 
     return (
