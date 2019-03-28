@@ -1,5 +1,4 @@
 import React from "react";
-
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import HeroSection from "../sections/HeroSection";
@@ -12,17 +11,18 @@ import ImageSection from "../sections/ImageSection";
 import BurgerMenu from "../components/burgerMenu";
 import FaqSection from "../sections/FaqSection";
 import BridalSponsorsSection from "../sections/BridalSponsorsSection";
+import { isLoggedIn } from "../services/auth";
 
-class IndexPage extends React.Component {
-  render() {
-    return (
-      <Layout>
-        <SEO
-          keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]}
-          title="This is Posadas"
-        />
+const IndexPage = () => (
+  <Layout>
+    <SEO
+      keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]}
+      title="This is Posadas"
+    />
+    {isLoggedIn() ? (
+      <>
         <BurgerMenu />
-        <HeroSection />
+        <HeroSection isAuth={true} />
         <CeremonyDateSection />
         <AgendaSection />
         <ImageSection />
@@ -31,9 +31,11 @@ class IndexPage extends React.Component {
         <RsvpSection />
         <FaqSection />
         <BridalSponsorsSection />
-      </Layout>
-    );
-  }
-}
+      </>
+    ) : (
+      <HeroSection isAuth={false} />
+    )}
+  </Layout>
+);
 
 export default IndexPage;

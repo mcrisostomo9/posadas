@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { graphql, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import mq from "../utils/breakpoints";
+import Login from "../components/login";
 
 const Container = styled.div`
   position: relative;
@@ -48,7 +49,7 @@ const Title = styled.h1`
   }
 `;
 
-const HeroSection = () => (
+const HeroSection = ({ isAuth }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -67,7 +68,7 @@ const HeroSection = () => (
           fluid={data.hero.childImageSharp.fluid}
           style={{ height: "100%" }}
         />
-        <Title>THIS IS POSADAS</Title>
+        {isAuth ? <Title>THIS IS POSADAS</Title> : <Login />}
       </Container>
     )}
   />

@@ -6,6 +6,8 @@ import BurgerMenu from "../components/burgerMenu";
 import styled from "styled-components";
 import P from "../components/P";
 import mq from "../utils/breakpoints";
+import { isLoggedIn } from "../services/auth";
+import HeroSection from "./gallery";
 
 const FaqContainer = styled.div`
   width: 100%;
@@ -103,49 +105,55 @@ const faq = [
 const FaqsPage = () => (
   <Layout>
     <SEO title="FAQs" />
-    <StickyNav />
-    <BurgerMenu />
-    <PageContainer>
-      <FaqContainer>
-        <h1>FAQ</h1>
-        <div>
-          {faq.map(i => (
-            <SingleFaqContainer>
-              <Question>{i.question}</Question>
-              {i.question === "Registry" ? (
-                <StyledP>
-                  We’re so lucky to be able to spend our wedding day with all of
-                  our friends and family; your presence is truly all the present
-                  we need. Because we have all the basic household supplies
-                  covered, if you’d like to get us a gift to celebrate, we’ve
-                  created a registry fund at{" "}
-                  <a
-                    href="https://theknot.com/us/thisisposadas2019/registry"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    theknot.com
-                  </a>{" "}
-                  that we’ll use to build our life together.
-                </StyledP>
-              ) : (
-                <StyledP>{i.answer}</StyledP>
-              )}
-            </SingleFaqContainer>
-          ))}
-        </div>
-        <StyledP>
-          For more information on the venue, please visit the website at{" "}
-          <a
-            href="http://thecasinosanclemente.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            www.thecasinosanclemente.com
-          </a>
-        </StyledP>
-      </FaqContainer>
-    </PageContainer>
+    {isLoggedIn() ? (
+      <>
+        <StickyNav />
+        <BurgerMenu />
+        <PageContainer>
+          <FaqContainer>
+            <h1>FAQ</h1>
+            <div>
+              {faq.map(i => (
+                <SingleFaqContainer>
+                  <Question>{i.question}</Question>
+                  {i.question === "Registry" ? (
+                    <StyledP>
+                      We’re so lucky to be able to spend our wedding day with
+                      all of our friends and family; your presence is truly all
+                      the present we need. Because we have all the basic
+                      household supplies covered, if you’d like to get us a gift
+                      to celebrate, we’ve created a registry fund at{" "}
+                      <a
+                        href="https://theknot.com/us/thisisposadas2019/registry"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        theknot.com
+                      </a>{" "}
+                      that we’ll use to build our life together.
+                    </StyledP>
+                  ) : (
+                    <StyledP>{i.answer}</StyledP>
+                  )}
+                </SingleFaqContainer>
+              ))}
+            </div>
+            <StyledP>
+              For more information on the venue, please visit the website at{" "}
+              <a
+                href="http://thecasinosanclemente.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                www.thecasinosanclemente.com
+              </a>
+            </StyledP>
+          </FaqContainer>
+        </PageContainer>
+      </>
+    ) : (
+      <HeroSection isAuth={false} />
+    )}
   </Layout>
 );
 

@@ -9,6 +9,8 @@ import styled from "styled-components";
 import mq from "../utils/breakpoints";
 import H3 from "../components/H3";
 import P from "../components/P";
+import { isLoggedIn } from "../services/auth";
+import HeroSection from "../sections/HeroSection";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -156,54 +158,62 @@ const BridalPartyPage = () => (
     render={data => (
       <Layout>
         <SEO title="Bridal Party | Sponsors" />
-        <StickyNav />
-        <BurgerMenu />
-        <PageContainer>
-          <BridalPartySection>
-            <ImgContainer>
-              <Img fluid={data.bridalSection.childImageSharp.fluid} />
-            </ImgContainer>
-            <TextContainer>
-              <Title>Bridal Party</Title>
-              <PartyContainer>
-                <NamesContainer>
-                  <H3>Nicole Sangalang</H3>
-                  {bridesmaidArray.map(i => (
-                    <P>{i}</P>
-                  ))}
-                </NamesContainer>
-                <NamesContainer>
-                  <H3>Matthew Posadas</H3>
-                  {groomsmenArray.map(i => (
-                    <P>{i}</P>
-                  ))}
-                </NamesContainer>
-              </PartyContainer>
-            </TextContainer>
-          </BridalPartySection>
-          <SponsorSectionContainer>
-            <TextContainer>
-              <Title>Sponsors</Title>
-              <PartyContainer>
-                <NamesContainer>
-                  <H3>Nicole Sangalang</H3>
-                  {brideSponsorArray.map(i => (
-                    <P>{i}</P>
-                  ))}
-                </NamesContainer>
-                <NamesContainer>
-                  <H3>Matthew Posadas</H3>
-                  {groomSponsorArray.map(i => (
-                    <P>{i}</P>
-                  ))}
-                </NamesContainer>
-              </PartyContainer>
-            </TextContainer>
-            <ImgContainer>
-              <Img fluid={data.sponsorsSection.childImageSharp.fluid} />
-            </ImgContainer>
-          </SponsorSectionContainer>
-        </PageContainer>
+
+        {isLoggedIn() ? (
+          <>
+            {" "}
+            <StickyNav />
+            <BurgerMenu />
+            <PageContainer>
+              <BridalPartySection>
+                <ImgContainer>
+                  <Img fluid={data.bridalSection.childImageSharp.fluid} />
+                </ImgContainer>
+                <TextContainer>
+                  <Title>Bridal Party</Title>
+                  <PartyContainer>
+                    <NamesContainer>
+                      <H3>Nicole Sangalang</H3>
+                      {bridesmaidArray.map(i => (
+                        <P>{i}</P>
+                      ))}
+                    </NamesContainer>
+                    <NamesContainer>
+                      <H3>Matthew Posadas</H3>
+                      {groomsmenArray.map(i => (
+                        <P>{i}</P>
+                      ))}
+                    </NamesContainer>
+                  </PartyContainer>
+                </TextContainer>
+              </BridalPartySection>
+              <SponsorSectionContainer>
+                <TextContainer>
+                  <Title>Sponsors</Title>
+                  <PartyContainer>
+                    <NamesContainer>
+                      <H3>Nicole Sangalang</H3>
+                      {brideSponsorArray.map(i => (
+                        <P>{i}</P>
+                      ))}
+                    </NamesContainer>
+                    <NamesContainer>
+                      <H3>Matthew Posadas</H3>
+                      {groomSponsorArray.map(i => (
+                        <P>{i}</P>
+                      ))}
+                    </NamesContainer>
+                  </PartyContainer>
+                </TextContainer>
+                <ImgContainer>
+                  <Img fluid={data.sponsorsSection.childImageSharp.fluid} />
+                </ImgContainer>
+              </SponsorSectionContainer>
+            </PageContainer>
+          </>
+        ) : (
+          <HeroSection isAuth={false} />
+        )}
       </Layout>
     )}
   />
