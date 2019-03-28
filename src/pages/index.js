@@ -13,29 +13,33 @@ import FaqSection from "../sections/FaqSection";
 import BridalSponsorsSection from "../sections/BridalSponsorsSection";
 import { isLoggedIn } from "../services/auth";
 
-const IndexPage = () => (
-  <Layout>
-    <SEO
-      keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]}
-      title="This is Posadas"
-    />
-    {isLoggedIn() ? (
-      <>
-        <BurgerMenu />
-        <HeroSection isAuth={true} />
-        <CeremonyDateSection />
-        <AgendaSection />
-        <ImageSection />
-        <HowWeMetSection />
-        <LocationSection />
-        <RsvpSection />
-        <FaqSection />
-        <BridalSponsorsSection />
-      </>
-    ) : (
-      <HeroSection isAuth={false} />
-    )}
-  </Layout>
-);
+class IndexPage extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <SEO
+          keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]}
+          title="This is Posadas"
+        />
+        {isLoggedIn() ? (
+          <>
+            <BurgerMenu />
+            <HeroSection isAuth={true} />
+            <CeremonyDateSection />
+            <AgendaSection />
+            <ImageSection />
+            <HowWeMetSection />
+            <LocationSection />
+            <RsvpSection />
+            <FaqSection />
+            <BridalSponsorsSection />
+          </>
+        ) : (
+          <HeroSection isAuth={false} />
+        )}
+      </Layout>
+    );
+  }
+}
 
 export default IndexPage;
