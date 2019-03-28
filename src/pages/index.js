@@ -36,7 +36,10 @@ class IndexPage extends React.Component {
             <BridalSponsorsSection />
           </>
         ) : (
-          <LoginSection />
+          <>
+            <div>shoud not render</div>
+            <LoginSection />
+          </>
         )}
       </Layout>
     );

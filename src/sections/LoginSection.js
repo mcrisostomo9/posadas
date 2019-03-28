@@ -9,13 +9,9 @@ const Container = styled.div`
   position: relative;
   height: 100vh;
 
-  // ${mq.a992} {
-  //   height: 800px;
-  // }
-  //
-  // ${mq.a1600} {
-  //   height: 1050px;
-  // }
+  ${mq.a1600} {
+    height: 1050px;
+  }
 
   ${mq.a1800} {
     height: auto;
