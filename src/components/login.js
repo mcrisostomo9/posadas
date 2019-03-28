@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { handleLogin, isLoggedIn } from "../services/auth";
+import { handleLogin } from "../services/auth";
 import styled from "styled-components";
 import mq from "../utils/breakpoints";
 
@@ -82,9 +82,9 @@ class Login extends React.Component {
   isError = () => this.setState({ error: true });
 
   render() {
-    if (isLoggedIn()) {
-      navigate(`/`);
-    }
+    // if (isLoggedIn()) {
+    //   navigate(`/`);
+    // }
     const { error } = this.state;
 
     return (
