@@ -161,7 +161,6 @@ const BridalPartyPage = () => (
 
         {isLoggedIn() ? (
           <>
-            {" "}
             <StickyNav />
             <BurgerMenu />
             <PageContainer>

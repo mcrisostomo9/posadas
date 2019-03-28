@@ -63,13 +63,25 @@ const HeroSection = ({ isAuth }) => (
       }
     `}
     render={data => (
-      <Container>
-        <Img
-          fluid={data.hero.childImageSharp.fluid}
-          style={{ height: "100%" }}
-        />
-        {isAuth ? <Title>THIS IS POSADAS</Title> : <Login />}
-      </Container>
+      <>
+        {isAuth ? (
+          <Container>
+            <Img
+              fluid={data.hero.childImageSharp.fluid}
+              style={{ height: "100%" }}
+            />
+            <Title>THIS IS POSADAS</Title>
+          </Container>
+        ) : (
+          <Container>
+            <Img
+              fluid={data.hero.childImageSharp.fluid}
+              style={{ height: "100%" }}
+            />
+            <Login />
+          </Container>
+        )}
+      </>
     )}
   />
 );
