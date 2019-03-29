@@ -2,7 +2,7 @@ import React from "react";
 import { setUser } from "../services/auth";
 
 const defaultState = {
-  isAuth: false,
+  isAuth: true,
   handleLogin: () => {},
 };
 
@@ -10,11 +10,10 @@ const AuthContext = React.createContext(defaultState);
 
 class AuthProvider extends React.Component {
   state = {
-    isAuth: false,
+    isAuth: true,
   };
 
   handleLogin = pw => {
-    console.log(pw);
     if (pw === `08302019`) {
       this.setState({ isAuth: true });
       setUser({ isAuth: true });
@@ -25,6 +24,7 @@ class AuthProvider extends React.Component {
 
   componentDidMount() {
     // Getting auth value from localStorage
+    console.log(`User is auth: ${this.state.isAuth}`);
     const lsAuth = JSON.parse(window.localStorage.getItem("gatsbyUser"));
     if (lsAuth) {
       this.setState({ isAuth: true });
