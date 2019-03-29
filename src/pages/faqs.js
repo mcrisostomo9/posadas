@@ -92,7 +92,7 @@ const faq = [
       "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure tag each photo on social media with our wedding hashtag, #ThisIsPosadas2019 so we can keep track of all of your photos!",
   },
   {
-    question: "Cash Bar",
+    question: "Hosted Bar",
     answer:
       "Please note we will be offering a full selection of cocktails, beer, and wine until 10 p.m., at which point the bar will turn over into a cash bar.",
   },
