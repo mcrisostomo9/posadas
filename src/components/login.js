@@ -3,6 +3,7 @@ import { navigate } from "gatsby";
 import styled from "styled-components";
 import mq from "../utils/breakpoints";
 import AuthContext from "../context/AuthContext";
+import { Title } from "../sections/HeroSection";
 
 const Container = styled.div`
   color: #fff;
@@ -12,16 +13,16 @@ const Container = styled.div`
   top: 50%;
   font-family: "Playfair Display", serif;
 
+  h2 {
+    font-weight: normal;
+  }
+
   ${mq.a1200} {
     top: 40%;
   }
 
   ${mq.a1800} {
     top: 25%;
-  }
-
-  h1 {
-    font-size: 30px;
   }
 
   form {
@@ -38,6 +39,10 @@ const Container = styled.div`
       outline: none;
     }
   }
+`;
+
+const StyledTitle = styled(Title)`
+  position: relative;
 `;
 
 const Input = styled.input`
@@ -88,7 +93,9 @@ class Login extends React.Component {
       <AuthContext.Consumer>
         {auth => (
           <Container>
-            <h1>Password is wedding date MMDDYYYY</h1>
+            <StyledTitle>THIS IS POSADAS</StyledTitle>
+
+            <h2>Password is wedding date MMDDYYYY</h2>
             <form
               method="post"
               onSubmit={event => {

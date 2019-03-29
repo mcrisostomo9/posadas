@@ -21,7 +21,7 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   color: #fff;
   position: absolute;
   width: 100%;
