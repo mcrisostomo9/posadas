@@ -11,7 +11,7 @@ import ImageSection from "../sections/ImageSection";
 import BurgerMenu from "../components/burgerMenu";
 import FaqSection from "../sections/FaqSection";
 import BridalSponsorsSection from "../sections/BridalSponsorsSection";
-import { isLoggedIn } from "../services/auth";
+import AuthContext from "../context/AuthContext";
 import LoginSection from "../sections/LoginSection";
 
 class IndexPage extends React.Component {
@@ -22,25 +22,30 @@ class IndexPage extends React.Component {
           keywords={[`Nicole Sangalang`, `Matt Posadas`, `Wedding`]}
           title="This is Posadas"
         />
-        {isLoggedIn() ? (
-          <>
-            <BurgerMenu />
-            <HeroSection />
-            <CeremonyDateSection />
-            <AgendaSection />
-            <ImageSection />
-            <HowWeMetSection />
-            <LocationSection />
-            <RsvpSection />
-            <FaqSection />
-            <BridalSponsorsSection />
-          </>
-        ) : (
-          <>
-            <div />
-            <LoginSection />
-          </>
-        )}
+        <AuthContext.Consumer>
+          {auth => (
+            <>
+              {auth.isAuth ? (
+                <>
+                  <BurgerMenu />
+                  <HeroSection />
+                  <CeremonyDateSection />
+                  <AgendaSection />
+                  <ImageSection />
+                  <HowWeMetSection />
+                  <LocationSection />
+                  <RsvpSection />
+                  <FaqSection />
+                  <BridalSponsorsSection />
+                </>
+              ) : (
+                <>
+                  <LoginSection />
+                </>
+              )}
+            </>
+          )}
+        </AuthContext.Consumer>
       </Layout>
     );
   }

@@ -1,8 +1,8 @@
 import React from "react";
 import { navigate } from "gatsby";
-import { handleLogin } from "../services/auth";
 import styled from "styled-components";
 import mq from "../utils/breakpoints";
+import AuthContext from "../context/AuthContext";
 
 const Container = styled.div`
   color: #fff;
@@ -72,9 +72,9 @@ class Login extends React.Component {
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event, login) => {
     event.preventDefault();
-    if (handleLogin(this.state) === false) {
+    if (login(this.state.password) !== `08302019`) {
       this.isError();
     }
   };
@@ -85,20 +85,30 @@ class Login extends React.Component {
     const { error } = this.state;
 
     return (
-      <Container>
-        <h1>Password is wedding date MMDDYYYY</h1>
-        <form
-          method="post"
-          onSubmit={event => {
-            this.handleSubmit(event);
-            navigate(`/`);
-          }}
-        >
-          <Input type="password" name="password" onChange={this.handleUpdate} />
-          <Submit type="submit" value="Log In" />
-        </form>
-        {error && <IncorrectPassword>Password is incorrect</IncorrectPassword>}
-      </Container>
+      <AuthContext.Consumer>
+        {auth => (
+          <Container>
+            <h1>Password is wedding date MMDDYYYY</h1>
+            <form
+              method="post"
+              onSubmit={event => {
+                this.handleSubmit(event, auth.handleLogin);
+                navigate(`/`);
+              }}
+            >
+              <Input
+                type="password"
+                name="password"
+                onChange={this.handleUpdate}
+              />
+              <Submit type="submit" value="Log In" />
+            </form>
+            {error && (
+              <IncorrectPassword>Password is incorrect</IncorrectPassword>
+            )}
+          </Container>
+        )}
+      </AuthContext.Consumer>
     );
   }
 }

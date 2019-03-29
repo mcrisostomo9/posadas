@@ -48,7 +48,7 @@ const Title = styled.h1`
   }
 `;
 
-const HeroSection = ({ isAuth }) => (
+const HeroSection = () => (
   <StaticQuery
     query={graphql`
       query {
