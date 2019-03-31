@@ -89,7 +89,7 @@ const faq = [
   {
     question: "Photos & Social Media",
     answer:
-      "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure tag each photo on social media with our wedding hashtag, #ThisIsPosadas2019 so we can keep track of all of your photos!",
+      "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure to tag each photo on social media with our wedding hashtag, #ThisIsPosadas2019 so we can keep track of all of your photos!",
   },
   {
     question: "Hosted Bar",
@@ -98,7 +98,7 @@ const faq = [
   },
   {
     question: "Registry",
-    answer: `We’re so lucky to be able to spend our wedding day with all of our friends and family; your presence is truly all the present we need. Because we have all the basic household supplies covered, if you’d like to get us a gift to celebrate, we’ve created a registry fund at theknot.com/us/thisisposadas2019/registry that we’ll use to build our life together.`,
+    answer: `We’re so lucky to be able to spend our wedding day with all of our friends and family. Because we have all the basic household supplies covered, if you’d like to get us a gift to celebrate, we’ve created a registry fund at theknot.com/us/thisisposadas2019/registry that we’ll use to build our life together.`,
   },
 ];
 
@@ -122,10 +122,9 @@ const FaqsPage = () => (
                         {i.question === "Registry" ? (
                           <StyledP>
                             We’re so lucky to be able to spend our wedding day
-                            with all of our friends and family; your presence is
-                            truly all the present we need. Because we have all
-                            the basic household supplies covered, if you’d like
-                            to get us a gift to celebrate, we’ve created a
+                            with all of our friends and family. Because we have
+                            all the basic household supplies covered, if you’d
+                            like to get us a gift to celebrate, we’ve created a
                             registry fund at{" "}
                             <a
                               href="https://theknot.com/us/thisisposadas2019/registry"

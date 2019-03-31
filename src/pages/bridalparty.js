@@ -123,16 +123,16 @@ const groomsmenArray = [
 ];
 
 const brideSponsorArray = [
-  "Rey Patawaran & Jennifer Galang",
-  "Melvin Sangalang & Carol Patawaran Kondro",
   "Cenon Dela Cruz & Rosanne Aniete Ramos",
+  "Melvin Sangalang & Carol Patawaran Kondro",
   "Nonato Manipon & Leila Soohoo",
+  "Rey Patawaran & Jennifer Galang",
 ];
 
 const groomSponsorArray = [
-  "Joe Mocilac & Susan Mocilac",
   "Barry Schiendler & Jessica Schiendler",
   "Diego Quaglierini & Leila Quaglierini",
+  "Joe Mocilac & Susan Mocilac",
 ];
 
 const BridalPartyPage = () => (
