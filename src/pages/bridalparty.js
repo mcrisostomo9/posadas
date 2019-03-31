@@ -130,9 +130,10 @@ const brideSponsorArray = [
 ];
 
 const groomSponsorArray = [
-  "Barry Schiendler & Jessica Schiendler",
-  "Diego Quaglierini & Leila Quaglierini",
   "Joe Mocilac & Susan Mocilac",
+  "Lito Posadas & Arlene Posadas",
+  "Diego Quaglierini & Leila Quaglierini",
+  "Barry Schiendler & Jessica Schiendler",
 ];
 
 const BridalPartyPage = () => (
