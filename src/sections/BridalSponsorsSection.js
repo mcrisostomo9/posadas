@@ -89,11 +89,11 @@ const BridalSponsorsSection = () => (
           <TextContainer>
             <H3>Things to do</H3>
             <StyledP>San Clemente State Beach & Pier</StyledP>
+            <StyledP>Outlets at San Clemente</StyledP>
             <StyledP>San Onofre State Beach</StyledP>
             <StyledP>T-Street Beach</StyledP>
             <StyledP>Dana Point Harbor</StyledP>
             <StyledP>Mission San Juan Capistrano</StyledP>
-            <StyledP>San Clemente Outlets</StyledP>
           </TextContainer>
         </ThingsToDoSquare>
         <BridalSquare>
