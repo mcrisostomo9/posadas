@@ -123,7 +123,7 @@ const groomsmenArray = [
 ];
 
 const brideSponsorArray = [
-  "Cenon Dela Cruz & Rosanne Aniete Ramos",
+  "Roman Sangalang (Elmer Sangalang) & Rosanne Aniete Ramos",
   "Melvin Sangalang & Carol Patawaran Kondro",
   "Nonato Manipon & Leila Soohoo",
   "Rey Patawaran & Jennifer Galang",
