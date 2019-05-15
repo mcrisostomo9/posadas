@@ -7,7 +7,7 @@ const AgendaSection = () => (
   <TextContainer>
     <Item>
       <H3>THE CEREMONY</H3>
-      <P>Begins 5:00 in the Rock Garden</P>
+      <P>Begins 4:30 in the Rock Garden</P>
       <P>The Casino</P>
       <P>San Clemente, CA</P>
     </Item>
