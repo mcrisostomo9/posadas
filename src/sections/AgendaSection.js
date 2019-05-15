@@ -17,7 +17,7 @@ const AgendaSection = () => (
       <P>on the Patio of the Stars</P>
     </Item>
     <Item>
-      <H3>THE CELEBRATION</H3>
+      <H3>THE CELEBRATIONs</H3>
       <P>Grand Ballroom for Dinner, Drinks, & Dancing</P>
       <P>Semi-formal Garden Attire</P>
     </Item>
