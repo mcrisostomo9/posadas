@@ -57,11 +57,6 @@ const StyledP = styled(P)`
 
 const faq = [
   {
-    question: "RSVP Deadline",
-    answer:
-      "Please make sure to RSVP using the link on our website no later than July 1st, 2019. Each person attending will need to RSVP individually on the link.",
-  },
-  {
     question: "Plus Ones (+1)",
     answer:
       "We have a strict guest list to stay on budget. Our wedding is strictly RSVP only. We will only able to accommodate those listed on your invitation.",
@@ -115,7 +110,20 @@ const FaqsPage = () => (
               <PageContainer>
                 <FaqContainer>
                   <h1>FAQ</h1>
-                  <div>
+                  <>
+                    <SingleFaqContainer>
+                      <Question>RSVP Deadline</Question>
+                      <StyledP>
+                        Please make sure to RSVP using the link on our website
+                        no later than July 1st, 2019.{" "}
+                        <u>
+                          Only the names printed on the envelope are listed as
+                          guests.
+                        </u>{" "}
+                        Each person attending will need to RSVP individually on
+                        the link
+                      </StyledP>
+                    </SingleFaqContainer>
                     {faq.map(i => (
                       <SingleFaqContainer>
                         <Question>{i.question}</Question>
@@ -140,7 +148,7 @@ const FaqsPage = () => (
                         )}
                       </SingleFaqContainer>
                     ))}
-                  </div>
+                  </>
                   <StyledP>
                     For more information on the venue, please visit the website
                     at{" "}
