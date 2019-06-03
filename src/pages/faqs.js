@@ -51,7 +51,7 @@ const StyledP = styled(P)`
   }
 
   a {
-    font-weight: bold;
+    text-decoration: underline;
   }
 `;
 
@@ -116,10 +116,10 @@ const FaqsPage = () => (
                       <StyledP>
                         Please make sure to RSVP using the link on our website
                         no later than July 1st, 2019.{" "}
-                        <u>
+                        <b>
                           Only the names printed on the envelope are listed as
                           guests.
-                        </u>{" "}
+                        </b>{" "}
                         Each person attending will need to RSVP individually on
                         the link
                       </StyledP>
