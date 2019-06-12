@@ -44,6 +44,10 @@ const FirstP = styled(P)`
   margin-top: 8px;
 `;
 
+const SecondP = styled(P)`
+  font-style: italic;
+`;
+
 const Gallery = styled(InformationBox)`
   display: block;
   position: relative;
@@ -112,7 +116,9 @@ class RsvpSection extends React.Component {
               />
               <Button onClick={this.openForm}>RSVP</Button>
               <FirstP>Please RSVP by July 1st</FirstP>
-              <P>Each guest will need to sign up individually on the link</P>
+              <SecondP>
+                Each guest will need to sign up individually on the link
+              </SecondP>
             </RSVP>
             <Gallery>
               <Img
