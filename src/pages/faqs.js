@@ -82,9 +82,14 @@ const faq = [
       "There is ample public parking ($1.50/hour) across the street and around the Casino property. Before 9am and after 6pm parking is free.",
   },
   {
+    question: "Ride Share",
+    answer:
+      "We strongly encourage you to celebrate responsibly. If you will not be using any hotel accommodations, please utilize a ride share program such as Uber or Lyft.",
+  },
+  {
     question: "Photos & Social Media",
     answer:
-      "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure to tag each photo on social media with our wedding hashtag, #ThisIsPosadas2019 so we can keep track of all of your photos!",
+      "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure to tag each photo on social media with our wedding hashtag, #THISISPOSADAS so we can keep track of all of your photos!",
   },
   {
     question: "Hosted Bar",

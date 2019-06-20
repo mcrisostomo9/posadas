@@ -135,6 +135,12 @@ const AccommodationArray = [
     link: "doubletree3.hilton.com/en/index.html",
     linkText: "doubletree3.hilton.com",
   },
+  {
+    name: "Holiday Inn Express",
+    link:
+      "www.ihg.com/holidayinnexpress/hotels/us/en/san-clemente/laxsc/hoteldetail",
+    linkText: "ihg.com/holidayinnexpress",
+  },
 ];
 
 const LocationSection = () => (
