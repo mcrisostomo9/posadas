@@ -87,6 +87,11 @@ const faq = [
       "We strongly encourage you to celebrate responsibly. If you will not be using any hotel accommodations, please utilize a ride share program such as Uber or Lyft.",
   },
   {
+    question: "Hotel Accomodations",
+    answer:
+      "For your convenience, a block of rooms has been reserved at Residence Inn Dana Point San Juan Capistrano. When calling to make your reservation, please mention the Posadas wedding in order to receive a discounted rate. The deadline to reserve a room using our discounted rate is July 30, 2019.",
+  },
+  {
     question: "Photos & Social Media",
     answer:
       "Please note that our ceremony will be unplugged. We ask that all phones and cameras be silenced and put away throughout the duration of the ceremony. However, we encourage guests to take photos afterwards during cocktail hour as well as the reception. Please be sure to tag each photo on social media with our wedding hashtag, #THISISPOSADAS so we can keep track of all of your photos!",

@@ -27,6 +27,7 @@ const Accommodation = styled(InformationBox)`
   background: #c3bb9f;
   position: relative;
   padding: 12px 36px;
+  height: 600px;
 
   :hover {
     filter: none;
@@ -113,7 +114,7 @@ const AccommodationArray = [
       "marriott.com/hotels/travel/snasj-residence-inn-dana-point-san-juan-capistrano/",
     linkText: "marriott.com",
     description:
-      "For your convenience, a block of rooms has been reserved at Residence Inn Dana Point San Juan Capistrano. When calling to make your reservation, please mention the Posadas wedding in order to receive a discounted rate.",
+      "For your convenience, a block of rooms has been reserved at Residence Inn Dana Point San Juan Capistrano. When calling to make your reservation, please mention the Posadas wedding in order to receive a discounted rate. The deadline to reserve a room using our discounted rate is July 30, 2019.",
   },
   {
     name: "Ritz Carlton Laguna Niguel",
