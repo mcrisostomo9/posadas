@@ -15,7 +15,7 @@ const HowWeMetSection = () => (
     <Item>
       <H3>THE FIRST DATE</H3>
       <P>
-        He took her to her first baseball game. They eat bad sushi and Dodger
+        He takes her to her first baseball game. They eat bad sushi and Dodger
         dogs. They miss three home runs and the seventh inning stretch. Best
         failed first date ever.
       </P>
