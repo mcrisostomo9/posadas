@@ -84,10 +84,10 @@ const faq = [
   {
     question: "Ride Share",
     answer:
-      "We strongly encourage you to celebrate responsibly. If you will not be using any hotel accommodations, please utilize a ride share program such as Uber or Lyft.",
+      "We strongly encourage you to celebrate responsibly. If you will not be using any hotel accommodations, please stay safe and utilize a ride share program such as Uber or Lyft when when consuming alcoholic beverages.",
   },
   {
-    question: "Hotel Accomodations",
+    question: "Hotel Accommodations",
     answer:
       "For your convenience, a block of rooms has been reserved at Residence Inn Dana Point San Juan Capistrano. When calling to make your reservation, please mention the Posadas wedding in order to receive a discounted rate. The deadline to reserve a room using our discounted rate is July 30, 2019.",
   },
