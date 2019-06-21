@@ -99,7 +99,7 @@ const faq = [
   {
     question: "Hosted Bar",
     answer:
-      "Please note we will be offering a full selection of cocktails, beer, and wine until 10 p.m., at which point the bar will turn over into a cash bar.",
+      "Please note we will be offering a full selection of cocktails, beer, and wine until 9PM, at which point the bar will turn over into a cash bar.",
   },
   {
     question: "Registry",
