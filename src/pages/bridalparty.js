@@ -115,7 +115,7 @@ const groomsmenArray = [
   "Albert Hernandez",
   "Brandyn Young",
   "Casey Isaac",
-  "Daniel Darkoski",
+  "Chris Afiesh",
   "James Thompson",
   "Jonathan McCormick",
   "Keith Young",
