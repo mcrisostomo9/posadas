@@ -13,7 +13,7 @@ import BurgerMenu from "../components/burgerMenu";
 import LoginSection from "../sections/LoginSection";
 import AuthContext from "../context/AuthContext";
 
-const PageContainer = styled.div`
+export const PageContainer = styled.div`
   padding: 20px 10px;
   text-align: center;
   position: relative;

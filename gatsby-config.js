@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `This is Posadas`,
@@ -28,6 +32,13 @@ module.exports = {
       },
     },
     "gatsby-plugin-styled-components",
+    {
+      resolve: `gatsby-source-prismic`,
+      options: {
+        repositoryName: `this-is-posadas`,
+        accessToken: `${process.env.GATSBY_API_KEY}`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

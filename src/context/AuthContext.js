@@ -24,12 +24,12 @@ class AuthProvider extends React.Component {
 
   componentDidMount() {
     // Getting auth value from localStorage
-    const lsAuth = JSON.parse(window.localStorage.getItem("gatsbyUser"));
-    if (lsAuth) {
-      this.setState({ isAuth: true });
-    } else {
-      this.setState({ isAuth: false });
-    }
+    // const lsAuth = JSON.parse(window.localStorage.getItem("gatsbyUser"));
+    // if (lsAuth) {
+    //   this.setState({ isAuth: true });
+    // } else {
+    //   this.setState({ isAuth: false });
+    // }
   }
 
   render() {
