@@ -273,5 +273,11 @@ export const pageQuery = graphql`
     gallery28: file(relativePath: { eq: "gallery28.jpg" }) {
       ...fluidImage
     }
+    gallery29: file(relativePath: { eq: "gallery29.jpg" }) {
+      ...fluidImage
+    }
+    gallery30: file(relativePath: { eq: "gallery30.jpg" }) {
+      ...fluidImage
+    }
   }
 `;
