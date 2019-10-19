@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { Link } from "gatsby";
+import { graphql, Link, useStaticQuery } from "gatsby";
 import { stack as Menu } from "react-burger-menu";
 
 const BurgerContainer = styled.div`
@@ -84,23 +84,52 @@ Note: Beware of modifying this element as it can break the animations - you shou
   }
 `;
 
-const BurgerMenu = () => (
-  <BurgerContainer>
-    <Menu right>
-      <Link id="home" className="menu-item" to="/">
-        Home
-      </Link>
-      <Link id="about" className="menu-item" to="/gallery">
-        Gallery
-      </Link>
-      <Link id="faqs" className="menu-item" to="/faqs">
-        FAQs
-      </Link>
-      <Link id="bridalparty" className="menu-item" to="/bridalparty">
-        Bridal Party
-      </Link>
-    </Menu>
-  </BurgerContainer>
-);
+const BurgerMenu = () => {
+  const {
+    allPrismicWeddingGallery: { edges },
+  } = useStaticQuery(NAV_QUERY);
+  return (
+    <BurgerContainer>
+      <Menu right>
+        <Link id="home" className="menu-item" to="/">
+          Home
+        </Link>
+        <Link id="about" className="menu-item" to="/gallery">
+          Gallery
+        </Link>
+        <Link id="faqs" className="menu-item" to="/faqs">
+          FAQs
+        </Link>
+        <Link id="bridalparty" className="menu-item" to="/bridalparty">
+          Bridal Party
+        </Link>
+        {edges.map(i => {
+          const galleryLink = i.node.data.title.text;
+          return (
+            <Link to={`/wedding-gallery/${galleryLink.toLowerCase()}`}>
+              {galleryLink}
+            </Link>
+          );
+        })}
+      </Menu>
+    </BurgerContainer>
+  );
+};
 
 export default BurgerMenu;
+
+const NAV_QUERY = graphql`
+  query NavQuery {
+    allPrismicWeddingGallery {
+      edges {
+        node {
+          data {
+            title {
+              text
+            }
+          }
+        }
+      }
+    }
+  }
+`;
