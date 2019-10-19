@@ -137,13 +137,7 @@ class GalleryPage extends React.Component {
                         fluid={this.props.data.gallery24.childImageSharp.fluid}
                       />
                       <Img
-                        fluid={this.props.data.gallery29.childImageSharp.fluid}
-                      />
-                      <Img
                         fluid={this.props.data.gallery28.childImageSharp.fluid}
-                      />
-                      <Img
-                        fluid={this.props.data.gallery30.childImageSharp.fluid}
                       />
                       <Img
                         fluid={this.props.data.gallery13.childImageSharp.fluid}

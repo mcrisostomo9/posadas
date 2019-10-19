@@ -15,7 +15,6 @@ const GalleryTemplate = ({
     },
   },
 }) => {
-  console.log(gallery);
   return (
     <Layout>
       <SEO title={`${title.text} Gallery`} />
