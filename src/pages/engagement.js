@@ -38,7 +38,7 @@ export const PageContainer = styled.div`
   }
 `;
 
-class GalleryPage extends React.Component {
+class EngagementPage extends React.Component {
   render() {
     return (
       <Layout>
@@ -172,7 +172,7 @@ class GalleryPage extends React.Component {
   }
 }
 
-export default GalleryPage;
+export default EngagementPage;
 
 export const fluidImage = graphql`
   fragment fluidImage on File {

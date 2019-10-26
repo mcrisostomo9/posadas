@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import StickyNav from "../components/StickyNav";
 import BurgerMenu from "../components/burgerMenu";
-import { PageContainer } from "../pages/gallery";
+import { PageContainer } from "../pages/engagement";
 import GalleryContainer from "../components/GalleryContainer";
 
 const GalleryTemplate = ({
@@ -50,7 +50,7 @@ export const GALLERY_QUERY = graphql`
             localFile {
               childImageSharp {
                 fluid(quality: 100) {
-                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

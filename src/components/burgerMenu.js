@@ -94,8 +94,8 @@ const BurgerMenu = () => {
         <Link id="home" className="menu-item" to="/">
           Home
         </Link>
-        <Link id="about" className="menu-item" to="/gallery">
-          Gallery
+        <Link id="about" className="menu-item" to="/engagement">
+          Engagement
         </Link>
         <Link id="faqs" className="menu-item" to="/faqs">
           FAQs
