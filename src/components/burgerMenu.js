@@ -97,9 +97,6 @@ const BurgerMenu = () => {
         <Link id="about" className="menu-item" to="/engagement">
           Engagement
         </Link>
-        <Link id="faqs" className="menu-item" to="/faqs">
-          FAQs
-        </Link>
         <Link id="bridalparty" className="menu-item" to="/bridalparty">
           Bridal Party
         </Link>
