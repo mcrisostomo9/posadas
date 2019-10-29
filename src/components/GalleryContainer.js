@@ -7,13 +7,17 @@ const Container = styled.div`
   max-width: 1600px;
   margin: 70px auto 20px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   grid-gap: 10px;
 
   ${mq.a768} {
     margin-top: 80px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+  }
+
+  ${mq.a992} {
+    grid-template-columns: repeat(3, 1fr);
   }
 `;
 
