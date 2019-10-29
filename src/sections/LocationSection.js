@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, Link, StaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import {
   InformationContainer,
@@ -63,86 +63,20 @@ const StyledH3 = styled(H3)`
   }
 `;
 
-const OtherAccommodationTitle = styled(StyledH3)`
-  ${mq.a1200} {
-    margin: 8px 0;
-  }
-`;
-
 const StyledP = styled(P)`
   color: #000;
 `;
 
-const SingleAccommodation = styled.div`
-  text-align: center;
-  margin-bottom: 16px;
-`;
-
-const OtherAccommodation = styled(SingleAccommodation)`
-  margin-bottom: 10px;
-`;
-
-const AccommodationLink = styled.a`
-  text-decoration: underline;
+const StyledLink = styled(Link)`
   color: #000;
+  text-decoration: none;
   font-family: Raleway, sans-serif;
-  font-size: 14px;
-
-  ${mq.a768} {
-    font-size: 16px;
+  margin-top: 1rem;
+  outline: none;
+  :hover {
+    text-decoration: underline;
   }
 `;
-
-const OtherLinks = styled.a`
-  font-size: 14px;
-  font-family: Raleway, sans-serif;
-  text-decoration: underline;
-  color: #000;
-`;
-
-const Description = styled(P)`
-  font-size: 14px !important;
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-`;
-
-const AccommodationArray = [
-  {
-    name: "Residence Inn Dana Point San Juan Capistrano",
-    link:
-      "marriott.com/hotels/travel/snasj-residence-inn-dana-point-san-juan-capistrano/",
-    linkText: "marriott.com",
-    description:
-      "For your convenience, a block of rooms has been reserved at Residence Inn Dana Point San Juan Capistrano. When calling to make your reservation, please mention the Posadas wedding in order to receive a discounted rate. The deadline to reserve a room using our discounted rate is July 30, 2019.",
-  },
-  {
-    name: "Ritz Carlton Laguna Niguel",
-    link: "www.ritzcarlton.com",
-    linkText: "ritzcarlton.com",
-  },
-  {
-    name: "St. Regis Monarch Beach",
-    link: "www.monarchbeachresort.com",
-    linkText: "monarchbeachresort.com",
-  },
-  {
-    name: "Best Western Inn Casablanca",
-    link: "www.bestwestern.com",
-    linkText: "bestwestern.com",
-  },
-  {
-    name: "Doubletree Dana Point",
-    link: "doubletree3.hilton.com/en/index.html",
-    linkText: "doubletree3.hilton.com",
-  },
-  {
-    name: "Holiday Inn Express",
-    link:
-      "www.ihg.com/holidayinnexpress/hotels/us/en/san-clemente/laxsc/hoteldetail",
-    linkText: "ihg.com/holidayinnexpress",
-  },
-];
 
 const LocationSection = () => (
   <StaticQuery
@@ -155,10 +89,33 @@ const LocationSection = () => (
             }
           }
         }
+        allPrismicWeddingGallery {
+          edges {
+            node {
+              data {
+                title {
+                  text
+                }
+              }
+            }
+          }
+        }
       }
     `}
     render={data => (
       <InformationContainer>
+        <Accommodation>
+          <TitleH3>Wedding Photos</TitleH3>
+          {data.allPrismicWeddingGallery.edges.map(i => {
+            const galleryLink = i.node.data.title.text;
+            return (
+              <StyledLink to={`/wedding-gallery/${galleryLink.toLowerCase()}`}>
+                {galleryLink}
+              </StyledLink>
+            );
+          })}
+          <StyledLink />
+        </Accommodation>
         <Location>
           <Img
             fluid={data.location.childImageSharp.fluid}
@@ -176,32 +133,6 @@ const LocationSection = () => (
             </MapLink>
           </TextContainer>
         </Location>
-        <Accommodation>
-          <SingleAccommodation>
-            <StyledH3>{AccommodationArray[0].name}</StyledH3>
-            <Description>{AccommodationArray[0].description}</Description>
-            <AccommodationLink
-              target="_blank"
-              href={`https://${AccommodationArray[0].link}`}
-            >
-              {AccommodationArray[0].linkText}
-            </AccommodationLink>
-          </SingleAccommodation>
-          <OtherAccommodationTitle>
-            Additional Accommodations
-          </OtherAccommodationTitle>
-          {AccommodationArray.map(
-            i =>
-              !i.description && (
-                <OtherAccommodation>
-                  <Description>{i.name}</Description>
-                  <OtherLinks target="_blank" href={`https://${i.link}`}>
-                    {i.linkText}
-                  </OtherLinks>
-                </OtherAccommodation>
-              )
-          )}
-        </Accommodation>
       </InformationContainer>
     )}
   />

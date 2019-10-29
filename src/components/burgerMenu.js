@@ -94,11 +94,11 @@ const BurgerMenu = () => {
         <Link id="home" className="menu-item" to="/">
           Home
         </Link>
-        <Link id="about" className="menu-item" to="/engagement">
-          Engagement
-        </Link>
         <Link id="bridalparty" className="menu-item" to="/bridalparty">
           Bridal Party
+        </Link>
+        <Link id="about" className="menu-item" to="/engagement">
+          Engagement
         </Link>
         {edges.map(i => {
           const galleryLink = i.node.data.title.text;

@@ -34,9 +34,6 @@ class IndexPage extends React.Component {
                   <ImageSection />
                   <HowWeMetSection />
                   <LocationSection />
-                  <RsvpSection />
-                  <FaqSection />
-                  <BridalSponsorsSection />
                 </>
               ) : (
                 <>
